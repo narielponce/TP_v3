@@ -18,7 +18,6 @@ namespace TP_v3.PresentationLayer
         private CategoriaService _categoriaService;
         private Curso _curso;
         private Categoria _categoria;
-        //private Categoria _categoria;
 
         public FrmAltaCurso()
         {
@@ -43,25 +42,12 @@ namespace TP_v3.PresentationLayer
         {
             //Creamos un nuevo objeto "curso" con los datos que estan cargado en el Form
 
-            //Curso curso = new Curso();
             _curso.idCurso = _curso != null ? _curso.idCurso : 0;
             _curso.nombre = txtNombreCurso.Text;
             _curso.descripcion = txtDescCurso.Text;
             _curso.fechaVigencia = dtimeFechaVig.Value;
             _curso.idCategoria = new Categoria();
             _curso.idCategoria.idCategoria = (int)cboCateg.SelectedValue;
-
-            //_curso.idCategoria = int.Parse(cboCateg.SelectedValue.ToString());
-            //var categ = new Categoria();
-            //_curso.idCategoria = new Categoria();
-            //_categoria.idCategoria = (int)cboCateg.SelectedValue;
-            //_curso.idCategoria = _categoria.idCategoria;
-
-            //{
-            //    idCategoria = (int)cboCateg.SelectedValue,
-            //};
-
-            //curso.idCategoria = int.Parse(cboCateg.SelectedValue.ToString());
 
             //Ahora llamamos a la capa de negocio
             _cursoService.GrabarCurso(_curso);
@@ -70,8 +56,6 @@ namespace TP_v3.PresentationLayer
         {
             txtNombreCurso.Text = string.Empty;
             txtDescCurso.Text = string.Empty;
-            //txtCategoria.Text = string.Empty;
-            //cboCateg.DisplayMember = string.Empty;
             dtimeFechaVig.Value = DateTime.Today;
 
         }

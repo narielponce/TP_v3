@@ -28,7 +28,7 @@ namespace TP_v3.DataAccessLayer
             parametros.Add("@Nombre", curso.nombre);
             parametros.Add("@Descripcion", curso.descripcion);
             parametros.Add("@Fecha_vigencia", curso.fechaVigencia);
-            parametros.Add("@Id_categoria", curso.idCategoria);
+            parametros.Add("@Id_categoria", curso.idCategoria.idCategoria);
             parametros.Add("@Borrado", curso.borrado);
 
             return (DataManager.GetInstance().EjecutarSQL(query, parametros) == 1);

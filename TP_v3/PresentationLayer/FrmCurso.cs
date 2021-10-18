@@ -50,6 +50,11 @@ namespace TP_v3.PresentationLayer
                     nombre = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
                     descripcion = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
                     fechaVigencia = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString()),
+                    idCategoria = new Categoria()
+                    {
+                        //idCategoria = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()),
+                        nombreCateg = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    }
                     //idCategoria = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()),
                     //borrado = bool.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()),
                 });

@@ -15,10 +15,12 @@ namespace TP_v3.PresentationLayer
     public partial class FrmCategoria : Form
     {
         private CategoriaService _categoriaService;
+        private Categoria _categoria;
         public FrmCategoria()
         {
             InitializeComponent();
             _categoriaService = new CategoriaService();
+            _categoria = new Categoria();
         }
         #region EVENTOS
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -53,17 +55,14 @@ namespace TP_v3.PresentationLayer
             
             if(celda.Value.ToString() == "Editar")
             {
-                FrmAltaCurso frmAltaCurso = new FrmAltaCurso();
-                frmAltaCurso.CargarCursos(new Curso
+                FrmAltaCategoria frmAltaCategoria = new FrmAltaCategoria();
+                frmAltaCategoria.CargarCategorias(new Categoria
                 {
-                    idCurso = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()),
-                    nombre = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    idCategoria = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()),
+                    nombreCateg = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
                     descripcion = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                    fechaVigencia = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString()),
-                    //idCategoria = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString()),
-                    //borrado = bool.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()),
                 });
-                frmAltaCurso.ShowDialog(this);
+                frmAltaCategoria.ShowDialog(this);
             }
             else if(celda.Value.ToString() == "Eliminar")
             {
