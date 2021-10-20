@@ -37,7 +37,7 @@ namespace TP_v3.BussinesLayer
         {
             return (List<Curso>)_cursoDao.ObtenerCursosSearch(searchText);
         }
-        internal IList<Curso> ConsultarCursosConFiltros(Dictionary<string, object> filtros)
+        public IList<Curso> ConsultarCursosConFiltros(Dictionary<string, object> filtros)
         {
             return _cursoDao.GetByFilters(filtros);
         }

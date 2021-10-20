@@ -108,8 +108,7 @@ namespace TP_v3.DataAccessLayer
                                           "      c.borrado ",
                                           "FROM Cursos c ",
                                           "INNER JOIN Categorias t ON c.id_categoria= t.id_categoria ",
-                                          "WHERE c.borrado = 0 ");
-            query += " OR c.nombre LIKE @Search OR c.descripcion LIKE @Search ";
+                                          "WHERE (c.nombre LIKE @Search OR c.descripcion LIKE @Search) AND c.borrado = 0 ");
             var parametros = new Dictionary<string, object>();
             parametros.Add("@Search", $"%{search}%");
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(query, parametros);

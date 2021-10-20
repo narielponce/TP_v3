@@ -39,12 +39,14 @@ namespace TP_v3
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inscripciónACursadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pboxUser = new System.Windows.Forms.PictureBox();
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).BeginInit();
             this.SuspendLayout();
@@ -97,8 +99,8 @@ namespace TP_v3
             this.categoríasToolStripMenuItem,
             this.objetivosToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.consultaToolStripMenuItem.Text = "ABM\'s";
             // 
             // cursosToolStripMenuItem
             // 
@@ -124,10 +126,33 @@ namespace TP_v3
             // transaccionesToolStripMenuItem
             // 
             this.transaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inscripciónACursadoToolStripMenuItem,
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem,
             this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(109, 21);
-            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(102, 21);
+            this.transaccionesToolStripMenuItem.Text = "Operaciones";
+            // 
+            // inscripciónACursadoToolStripMenuItem
+            // 
+            this.inscripciónACursadoToolStripMenuItem.Name = "inscripciónACursadoToolStripMenuItem";
+            this.inscripciónACursadoToolStripMenuItem.Size = new System.Drawing.Size(334, 22);
+            this.inscripciónACursadoToolStripMenuItem.Text = "Inscripción a cursado";
+            this.inscripciónACursadoToolStripMenuItem.Click += new System.EventHandler(this.inscripciónACursadoToolStripMenuItem_Click);
+            // 
+            // registroDeAvanceCursadoPorUsuarioToolStripMenuItem
+            // 
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Name = "registroDeAvanceCursadoPorUsuarioToolStripMenuItem";
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(334, 22);
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Text = "Registro de avance cursado por usuario";
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem_Click);
+            // 
+            // actualizaciónDeAvanceDeUsuariosToolStripMenuItem
+            // 
+            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Name = "actualizaciónDeAvanceDeUsuariosToolStripMenuItem";
+            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(334, 22);
+            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Text = "Actualización de avance de usuarios";
+            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -171,13 +196,6 @@ namespace TP_v3
             this.pboxUser.TabIndex = 2;
             this.pboxUser.TabStop = false;
             // 
-            // actualizaciónDeAvanceDeUsuariosToolStripMenuItem
-            // 
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Name = "actualizaciónDeAvanceDeUsuariosToolStripMenuItem";
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Text = "Actualización de avance de usuarios";
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -220,6 +238,8 @@ namespace TP_v3
         private System.Windows.Forms.PictureBox pboxUser;
         private System.Windows.Forms.ToolStripMenuItem objetivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizaciónDeAvanceDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inscripciónACursadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeAvanceCursadoPorUsuarioToolStripMenuItem;
     }
 }
 

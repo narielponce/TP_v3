@@ -71,5 +71,19 @@ namespace TP_v3
             FrmAvanceUser frmAvanceUser = new FrmAvanceUser();
             frmAvanceUser.Show();
         }
+
+        private void inscripciónACursadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            FrmUsuarioCurso frmUsuarioCurso = new FrmUsuarioCurso();
+            frmUsuarioCurso.Show();
+        }
+
+        private void registroDeAvanceCursadoPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            FrmUsuarioCursoAvance frmUsuarioCursoAvance = new FrmUsuarioCursoAvance();
+            frmUsuarioCursoAvance.Show();
+        }
     }
 }
