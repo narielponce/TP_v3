@@ -33,6 +33,7 @@ namespace TP_v3
             rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rpta == DialogResult.No)
                 e.Cancel = true;
+            else Application.Exit();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

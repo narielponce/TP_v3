@@ -35,8 +35,8 @@ namespace TP_v3.PresentationLayer
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblPuntuacion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPuntuacion = new System.Windows.Forms.TextBox();
+            this.txtObserv = new System.Windows.Forms.TextBox();
             this.lblObser = new System.Windows.Forms.Label();
             this.lblFechInicio = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,9 +70,9 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.Controls.Add(this.dtpInicio);
             this.grbBusqueda.Controls.Add(this.label1);
             this.grbBusqueda.Controls.Add(this.lblFechInicio);
-            this.grbBusqueda.Controls.Add(this.textBox2);
+            this.grbBusqueda.Controls.Add(this.txtObserv);
             this.grbBusqueda.Controls.Add(this.lblObser);
-            this.grbBusqueda.Controls.Add(this.textBox1);
+            this.grbBusqueda.Controls.Add(this.txtPuntuacion);
             this.grbBusqueda.Controls.Add(this.lblPuntuacion);
             this.grbBusqueda.Controls.Add(this.cboCurso);
             this.grbBusqueda.Controls.Add(this.lblCurso);
@@ -111,20 +111,20 @@ namespace TP_v3.PresentationLayer
             this.lblPuntuacion.TabIndex = 4;
             this.lblPuntuacion.Text = "Puntuación";
             // 
-            // textBox1
+            // txtPuntuacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtPuntuacion.Location = new System.Drawing.Point(133, 87);
+            this.txtPuntuacion.Name = "txtPuntuacion";
+            this.txtPuntuacion.Size = new System.Drawing.Size(200, 23);
+            this.txtPuntuacion.TabIndex = 5;
             // 
-            // textBox2
+            // txtObserv
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 116);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 72);
-            this.textBox2.TabIndex = 7;
+            this.txtObserv.Location = new System.Drawing.Point(133, 116);
+            this.txtObserv.Multiline = true;
+            this.txtObserv.Name = "txtObserv";
+            this.txtObserv.Size = new System.Drawing.Size(200, 72);
+            this.txtObserv.TabIndex = 7;
             // 
             // lblObser
             // 
@@ -175,6 +175,7 @@ namespace TP_v3.PresentationLayer
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegistrar
             // 
@@ -184,6 +185,7 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FrmUsuarioCurso
             // 
@@ -197,6 +199,7 @@ namespace TP_v3.PresentationLayer
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmUsuarioCurso";
             this.Text = "Registrar cursado";
+            this.Load += new System.EventHandler(this.FrmUsuarioCurso_Load);
             this.grbBusqueda.ResumeLayout(false);
             this.grbBusqueda.PerformLayout();
             this.ResumeLayout(false);
@@ -212,9 +215,9 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechInicio;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtObserv;
         private System.Windows.Forms.Label lblObser;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPuntuacion;
         private System.Windows.Forms.Label lblPuntuacion;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.Label lblCurso;
