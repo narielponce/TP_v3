@@ -14,5 +14,6 @@ namespace TP_v3.Entities
         public string Observacion { get; set; }
         public DateTime Inicio { get; set; }
         public DateTime Fin { get; set; }
+
     }
 }

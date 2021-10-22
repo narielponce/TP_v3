@@ -20,6 +20,13 @@ namespace TP_v3.BussinesLayer
             _usuarioCursoDao.InsertarUsuarioCurso(usuariosCurso);
             return usuariosCurso;
         }
+        public List<UsuariosCurso> ConsultarUsuarioCurso(Dictionary<string, object> parametros)
+        {
+            return (List<UsuariosCurso>)_usuarioCursoDao.ObtenerUsuarioCurso(parametros);
+        }
+        public IList<UsuariosCurso> ConsultarUsuarioCursoPorId(int id)
+        {
+            return _usuarioCursoDao.GetUsuarioCursoById(id);
+        }
     }
-    
 }

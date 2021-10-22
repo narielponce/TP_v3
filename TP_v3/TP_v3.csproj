@@ -50,12 +50,14 @@
     <Compile Include="BussinesLayer\CategoriaService.cs" />
     <Compile Include="BussinesLayer\CursoService.cs" />
     <Compile Include="BussinesLayer\ObjetivoService.cs" />
+    <Compile Include="BussinesLayer\UsuarioCursoAvanceService.cs" />
     <Compile Include="BussinesLayer\UsuariosCursoService.cs" />
     <Compile Include="BussinesLayer\UsuarioService.cs" />
     <Compile Include="DataAccessLayer\CategoriaDao.cs" />
     <Compile Include="DataAccessLayer\CursoDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\ObjetivoDao.cs" />
+    <Compile Include="DataAccessLayer\UsuarioCursoAvanceDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioCursoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Categoria.cs" />
@@ -119,16 +121,16 @@
     <Compile Include="PresentationLayer\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FrmUsuarioCursoAvance.cs">
+    <Compile Include="PresentationLayer\Operaciones\FrmUsuarioCursoAvance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\FrmUsuarioCursoAvance.Designer.cs">
+    <Compile Include="PresentationLayer\Operaciones\FrmUsuarioCursoAvance.Designer.cs">
       <DependentUpon>FrmUsuarioCursoAvance.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FrmUsuarioCurso.cs">
+    <Compile Include="PresentationLayer\Operaciones\FrmUsuarioCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\FrmUsuarioCurso.Designer.cs">
+    <Compile Include="PresentationLayer\Operaciones\FrmUsuarioCurso.Designer.cs">
       <DependentUpon>FrmUsuarioCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\LogUser.cs" />
@@ -161,10 +163,10 @@
     <EmbeddedResource Include="PresentationLayer\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FrmUsuarioCursoAvance.resx">
+    <EmbeddedResource Include="PresentationLayer\Operaciones\FrmUsuarioCursoAvance.resx">
       <DependentUpon>FrmUsuarioCursoAvance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FrmUsuarioCurso.resx">
+    <EmbeddedResource Include="PresentationLayer\Operaciones\FrmUsuarioCurso.resx">
       <DependentUpon>FrmUsuarioCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
