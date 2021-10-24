@@ -56,6 +56,7 @@
     <Compile Include="DataAccessLayer\CategoriaDao.cs" />
     <Compile Include="DataAccessLayer\CursoDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\DataMngrSp.cs" />
     <Compile Include="DataAccessLayer\ObjetivoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioCursoAvanceDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioCursoDao.cs" />

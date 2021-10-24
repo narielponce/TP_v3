@@ -74,24 +74,29 @@ namespace TP_v3.PresentationLayer
             dgvUsuarioCursos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-            dgvUsuarioCursos.Columns[0].Name = "User";
+            dgvUsuarioCursos.Columns[0].Name = "Usuario";
             dgvUsuarioCursos.Columns[0].DataPropertyName = "IdUsuario";
-            dgvUsuarioCursos.Columns[0].Width = 50;
+            dgvUsuarioCursos.Columns[0].Width = 120;
 
             dgvUsuarioCursos.Columns[1].Name = "Curso";
             dgvUsuarioCursos.Columns[1].DataPropertyName = "IdCurso";
+            dgvUsuarioCursos.Columns[0].Width = 170;
 
-            dgvUsuarioCursos.Columns[2].Name = "Puntuación";
+            dgvUsuarioCursos.Columns[2].Name = "Punt.";
             dgvUsuarioCursos.Columns[2].DataPropertyName = "puntuacion";
+            dgvUsuarioCursos.Columns[0].Width = 50;
 
             dgvUsuarioCursos.Columns[3].Name = "Observaciones";
             dgvUsuarioCursos.Columns[3].DataPropertyName = "observacion";
+            dgvUsuarioCursos.Columns[0].Width = 100;
 
             dgvUsuarioCursos.Columns[4].Name = "Inicio";
             dgvUsuarioCursos.Columns[4].DataPropertyName = "Inicio";
+            dgvUsuarioCursos.Columns[0].Width = 80;
 
             dgvUsuarioCursos.Columns[5].Name = "Fin";
             dgvUsuarioCursos.Columns[5].DataPropertyName = "Fin";
+            dgvUsuarioCursos.Columns[0].Width = 80;
 
             dgvUsuarioCursos.AutoResizeColumnHeadersHeight();
 

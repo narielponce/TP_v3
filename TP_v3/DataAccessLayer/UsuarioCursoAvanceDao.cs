@@ -13,17 +13,17 @@ namespace TP_v3.DataAccessLayer
         public IList<UsuariosCurso> ObtenerUsuariosCurso(string user)
         {
             List<UsuariosCurso> listaUsuariosCurso = new List<UsuariosCurso>();
-            var query = string.Concat("SELECT id_usuario, ",
-                                          "   id_curso, ",
-                                          "   puntuacion, ",
-                                          "   observaciones, ",
-                                          "   fecha_inicio, ",
-                                          "   fecha_fin ",
-                                          "FROM UsuariosCursos c ");
-                                          //"WHERE id_usuario = @Search ");
+            //var query = string.Concat("SELECT id_usuario, ",
+              //                            "   id_curso, ",
+              //                            "   puntuacion, ",
+              //                            "   observaciones, ",
+              //                            "   fecha_inicio, ",
+              //                            "   fecha_fin ",
+              //                            "FROM UsuariosCursos c ");
+              //                            //"WHERE id_usuario = @Search ");
             var parametros = new Dictionary<string, object>();
-            parametros.Add("@Search", user);
-            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(query, parametros);
+            parametros.Add("@idUsuario", user);
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL("SP_SEL_UsuariosCurso", parametros);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {

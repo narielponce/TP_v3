@@ -53,20 +53,22 @@ namespace TP_v3.DataAccessLayer
         public IList<UsuariosCurso> GetUsuarioCursoById(int idUsuario)
         {
             List<UsuariosCurso> listadoUsuariosCurso = new List<UsuariosCurso>();
-            var query = string.Concat("SELECT id_usuario, ",
-                                          "   id_curso, ",
-                                          "   puntuacion, ",
-                                          "   observaciones, ",
-                                          "   fecha_inicio, ",
-                                          "   fecha_fin ",
-                                          "FROM UsuariosCurso ",
-                                          "WHERE id_usuario = @IdUser ");
+            //var query = string.Concat("SELECT id_usuario, ",
+            //                              "   id_curso, ",
+            //                              "   puntuacion, ",
+            //                              "   observaciones, ",
+            //                              "   fecha_inicio, ",
+            //                             "   fecha_fin ",
+            //                              "FROM UsuariosCurso ",
+            //                              "WHERE id_usuario = @IdUser ");
 
             var parametros = new Dictionary<string, object>();
-            parametros.Add("@IdUser", idUsuario);
+            //parametros.Add("@IdUser", idUsuario);
+            parametros.Add("@IdUsuario", idUsuario);
 
-            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(query, parametros);
-            foreach(DataRow row in resultadoConsulta.Rows)
+            //var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(query, parametros);
+            var resultadoConsulta =  DataMngrSp.DataMngrSP.GetInstance().ConsultaSQL("SP_SEL_UsuariosCurso", parametros);
+            foreach (DataRow row in resultadoConsulta.Rows)
             {
                 listadoUsuariosCurso.Add(ObjectMapping(row));
             }
@@ -77,10 +79,13 @@ namespace TP_v3.DataAccessLayer
             UsuariosCurso oUsuariosCurso = new UsuariosCurso();
 
             oUsuariosCurso.IdUsuario = new Usuario();
-            oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["id_usuario"].ToString());
+            //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["id_usuario"].ToString());
+            //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["usuario"].ToString());
+            oUsuariosCurso.IdUsuario.nombreUsuario = row["usuario"].ToString();
 
             oUsuariosCurso.IdCurso = new Curso();
-            oUsuariosCurso.IdCurso.idCurso = Convert.ToInt32(row["id_curso"].ToString());
+            //oUsuariosCurso.IdCurso.idCurso = Convert.ToInt32(row["id_curso"].ToString());
+            oUsuariosCurso.IdCurso.nombre = row["curso"].ToString();
 
             oUsuariosCurso.Puntuacion = Convert.ToInt32(row["puntuacion"].ToString());
             oUsuariosCurso.Observacion = row["observaciones"].ToString();

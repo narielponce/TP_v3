@@ -40,6 +40,8 @@ namespace TP_v3.PresentationLayer
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.lblRotulo = new System.Windows.Forms.Label();
             this.grbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCursos)).BeginInit();
             this.SuspendLayout();
@@ -63,13 +65,14 @@ namespace TP_v3.PresentationLayer
             // 
             // grbBusqueda
             // 
+            this.grbBusqueda.Controls.Add(this.lblRotulo);
             this.grbBusqueda.Controls.Add(this.dgvUsuarioCursos);
             this.grbBusqueda.Controls.Add(this.btnConsultar);
             this.grbBusqueda.Controls.Add(this.cboUsuario);
             this.grbBusqueda.Controls.Add(this.lblUsuario);
             this.grbBusqueda.Location = new System.Drawing.Point(12, 12);
             this.grbBusqueda.Name = "grbBusqueda";
-            this.grbBusqueda.Size = new System.Drawing.Size(608, 235);
+            this.grbBusqueda.Size = new System.Drawing.Size(683, 294);
             this.grbBusqueda.TabIndex = 2;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Datos";
@@ -77,14 +80,14 @@ namespace TP_v3.PresentationLayer
             // dgvUsuarioCursos
             // 
             this.dgvUsuarioCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarioCursos.Location = new System.Drawing.Point(6, 66);
+            this.dgvUsuarioCursos.Location = new System.Drawing.Point(9, 99);
             this.dgvUsuarioCursos.Name = "dgvUsuarioCursos";
-            this.dgvUsuarioCursos.Size = new System.Drawing.Size(602, 163);
+            this.dgvUsuarioCursos.Size = new System.Drawing.Size(668, 181);
             this.dgvUsuarioCursos.TabIndex = 15;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(507, 22);
+            this.btnConsultar.Location = new System.Drawing.Point(374, 22);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(95, 25);
             this.btnConsultar.TabIndex = 14;
@@ -95,7 +98,7 @@ namespace TP_v3.PresentationLayer
             // cboPorcAvan
             // 
             this.cboPorcAvan.FormattingEnabled = true;
-            this.cboPorcAvan.Location = new System.Drawing.Point(106, 302);
+            this.cboPorcAvan.Location = new System.Drawing.Point(106, 355);
             this.cboPorcAvan.Name = "cboPorcAvan";
             this.cboPorcAvan.Size = new System.Drawing.Size(264, 25);
             this.cboPorcAvan.TabIndex = 13;
@@ -103,7 +106,7 @@ namespace TP_v3.PresentationLayer
             // lblPorcAvance
             // 
             this.lblPorcAvance.AutoSize = true;
-            this.lblPorcAvance.Location = new System.Drawing.Point(15, 302);
+            this.lblPorcAvance.Location = new System.Drawing.Point(15, 355);
             this.lblPorcAvance.Name = "lblPorcAvance";
             this.lblPorcAvance.Size = new System.Drawing.Size(72, 17);
             this.lblPorcAvance.TabIndex = 12;
@@ -111,7 +114,7 @@ namespace TP_v3.PresentationLayer
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(106, 273);
+            this.dtpInicio.Location = new System.Drawing.Point(106, 326);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(264, 23);
             this.dtpInicio.TabIndex = 11;
@@ -119,7 +122,7 @@ namespace TP_v3.PresentationLayer
             // lblFechaInicio
             // 
             this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Location = new System.Drawing.Point(15, 273);
+            this.lblFechaInicio.Location = new System.Drawing.Point(15, 326);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(66, 17);
             this.lblFechaInicio.TabIndex = 9;
@@ -128,7 +131,7 @@ namespace TP_v3.PresentationLayer
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(429, 287);
+            this.btnCancelar.Location = new System.Drawing.Point(605, 344);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(81, 40);
             this.btnCancelar.TabIndex = 3;
@@ -138,18 +141,37 @@ namespace TP_v3.PresentationLayer
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(529, 287);
+            this.btnRegistrar.Location = new System.Drawing.Point(716, 343);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 40);
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(701, 111);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(100, 43);
+            this.btnSelect.TabIndex = 14;
+            this.btnSelect.Text = "Seleccionar";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            // 
+            // lblRotulo
+            // 
+            this.lblRotulo.AutoSize = true;
+            this.lblRotulo.Location = new System.Drawing.Point(6, 66);
+            this.lblRotulo.Name = "lblRotulo";
+            this.lblRotulo.Size = new System.Drawing.Size(146, 17);
+            this.lblRotulo.TabIndex = 16;
+            this.lblRotulo.Text = "Cursos seleccionados";
+            // 
             // FrmUsuarioCursoAvance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 343);
+            this.ClientSize = new System.Drawing.Size(828, 395);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cboPorcAvan);
             this.Controls.Add(this.btnCancelar);
@@ -183,5 +205,7 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.Label lblPorcAvance;
         private System.Windows.Forms.DataGridView dgvUsuarioCursos;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Label lblRotulo;
     }
 }

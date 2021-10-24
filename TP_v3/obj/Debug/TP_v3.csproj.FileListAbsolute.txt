@@ -17,4 +17,3 @@ D:\PAV\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.FrmAltaObjetivo.resources
 D:\PAV\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.FrmAvanceUser.resources
 D:\PAV\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.FrmUsuarioCurso.resources
 D:\PAV\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.FrmUsuarioCursoAvance.resources
-D:\PAV\TP_v3\TP_v3\obj\Debug\TP_v3.csproj.AssemblyReference.cache
