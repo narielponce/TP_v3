@@ -34,11 +34,26 @@ namespace TP_v3.PresentationLayer
             cbo.ValueMember = value;
             cbo.SelectedIndex = -1;
         }
+        private void LlenarCboPuntuacion()
+        {
+            cboPuntuacion.Items.Add(10);
+            cboPuntuacion.Items.Add(20);
+            cboPuntuacion.Items.Add(30);
+            cboPuntuacion.Items.Add(40);
+            cboPuntuacion.Items.Add(50);
+            cboPuntuacion.Items.Add(60);
+            cboPuntuacion.Items.Add(70);
+            cboPuntuacion.Items.Add(80);
+            cboPuntuacion.Items.Add(90);
+            cboPuntuacion.Items.Add(100);
+            cboPuntuacion.SelectedIndex = 0;
+        }
         #region EVENTOS
         private void FrmUsuarioCurso_Load(object sender, EventArgs e)
         {
             LlenarCombo(cboCurso, _cursoService.ObtenerCursos(), "nombre", "IdCurso");
             LlenarCombo(cboUsuario, _usuarioService.ObtenerUsuarios(), "nombreUsuario", "idUsuario");
+            LlenarCboPuntuacion();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -64,7 +79,8 @@ namespace TP_v3.PresentationLayer
             _usuarioCurso.IdUsuario = new Usuario();
             _usuarioCurso.IdUsuario.idUsuario = Convert.ToInt32(cboUsuario.SelectedValue.ToString());
 
-            _usuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text.ToString());
+            //_usuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text.ToString());
+            _usuarioCurso.Puntuacion = Convert.ToInt32(cboPuntuacion.SelectedItem.ToString());
             _usuarioCurso.Observacion = txtObserv.Text;
             _usuarioCurso.Inicio = Convert.ToDateTime(dtpInicio.Value);
             _usuarioCurso.Fin = Convert.ToDateTime(dtpFin.Value);

@@ -32,18 +32,18 @@ namespace TP_v3.PresentationLayer
             this.lblUsuario = new System.Windows.Forms.Label();
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.grbBusqueda = new System.Windows.Forms.GroupBox();
-            this.cboCurso = new System.Windows.Forms.ComboBox();
-            this.lblCurso = new System.Windows.Forms.Label();
-            this.lblPuntuacion = new System.Windows.Forms.Label();
-            this.txtPuntuacion = new System.Windows.Forms.TextBox();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblFechInicio = new System.Windows.Forms.Label();
             this.txtObserv = new System.Windows.Forms.TextBox();
             this.lblObser = new System.Windows.Forms.Label();
-            this.lblFechInicio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.lblPuntuacion = new System.Windows.Forms.Label();
+            this.cboCurso = new System.Windows.Forms.ComboBox();
+            this.lblCurso = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.cboPuntuacion = new System.Windows.Forms.ComboBox();
             this.grbBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,13 +66,13 @@ namespace TP_v3.PresentationLayer
             // 
             // grbBusqueda
             // 
+            this.grbBusqueda.Controls.Add(this.cboPuntuacion);
             this.grbBusqueda.Controls.Add(this.dtpFin);
             this.grbBusqueda.Controls.Add(this.dtpInicio);
             this.grbBusqueda.Controls.Add(this.label1);
             this.grbBusqueda.Controls.Add(this.lblFechInicio);
             this.grbBusqueda.Controls.Add(this.txtObserv);
             this.grbBusqueda.Controls.Add(this.lblObser);
-            this.grbBusqueda.Controls.Add(this.txtPuntuacion);
             this.grbBusqueda.Controls.Add(this.lblPuntuacion);
             this.grbBusqueda.Controls.Add(this.cboCurso);
             this.grbBusqueda.Controls.Add(this.lblCurso);
@@ -85,38 +85,37 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Datos";
             // 
-            // cboCurso
+            // dtpFin
             // 
-            this.cboCurso.FormattingEnabled = true;
-            this.cboCurso.Location = new System.Drawing.Point(133, 53);
-            this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(200, 25);
-            this.cboCurso.TabIndex = 3;
+            this.dtpFin.Location = new System.Drawing.Point(133, 237);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(200, 23);
+            this.dtpFin.TabIndex = 11;
             // 
-            // lblCurso
+            // dtpInicio
             // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(14, 56);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(45, 17);
-            this.lblCurso.TabIndex = 2;
-            this.lblCurso.Text = "Curso";
+            this.dtpInicio.Location = new System.Drawing.Point(133, 204);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(200, 23);
+            this.dtpInicio.TabIndex = 10;
             // 
-            // lblPuntuacion
+            // label1
             // 
-            this.lblPuntuacion.AutoSize = true;
-            this.lblPuntuacion.Location = new System.Drawing.Point(14, 87);
-            this.lblPuntuacion.Name = "lblPuntuacion";
-            this.lblPuntuacion.Size = new System.Drawing.Size(82, 17);
-            this.lblPuntuacion.TabIndex = 4;
-            this.lblPuntuacion.Text = "Puntuación";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 237);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Fecha inicio";
             // 
-            // txtPuntuacion
+            // lblFechInicio
             // 
-            this.txtPuntuacion.Location = new System.Drawing.Point(133, 87);
-            this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(200, 23);
-            this.txtPuntuacion.TabIndex = 5;
+            this.lblFechInicio.AutoSize = true;
+            this.lblFechInicio.Location = new System.Drawing.Point(14, 204);
+            this.lblFechInicio.Name = "lblFechInicio";
+            this.lblFechInicio.Size = new System.Drawing.Size(85, 17);
+            this.lblFechInicio.TabIndex = 8;
+            this.lblFechInicio.Text = "Fecha inicio";
             // 
             // txtObserv
             // 
@@ -135,37 +134,31 @@ namespace TP_v3.PresentationLayer
             this.lblObser.TabIndex = 6;
             this.lblObser.Text = "Observaciones";
             // 
-            // lblFechInicio
+            // lblPuntuacion
             // 
-            this.lblFechInicio.AutoSize = true;
-            this.lblFechInicio.Location = new System.Drawing.Point(14, 204);
-            this.lblFechInicio.Name = "lblFechInicio";
-            this.lblFechInicio.Size = new System.Drawing.Size(85, 17);
-            this.lblFechInicio.TabIndex = 8;
-            this.lblFechInicio.Text = "Fecha inicio";
+            this.lblPuntuacion.AutoSize = true;
+            this.lblPuntuacion.Location = new System.Drawing.Point(14, 87);
+            this.lblPuntuacion.Name = "lblPuntuacion";
+            this.lblPuntuacion.Size = new System.Drawing.Size(82, 17);
+            this.lblPuntuacion.TabIndex = 4;
+            this.lblPuntuacion.Text = "Puntuación";
             // 
-            // label1
+            // cboCurso
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Fecha inicio";
+            this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Location = new System.Drawing.Point(133, 53);
+            this.cboCurso.Name = "cboCurso";
+            this.cboCurso.Size = new System.Drawing.Size(200, 25);
+            this.cboCurso.TabIndex = 3;
             // 
-            // dtpInicio
+            // lblCurso
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(133, 204);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(200, 23);
-            this.dtpInicio.TabIndex = 10;
-            // 
-            // dtpFin
-            // 
-            this.dtpFin.Location = new System.Drawing.Point(133, 237);
-            this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(200, 23);
-            this.dtpFin.TabIndex = 11;
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Location = new System.Drawing.Point(14, 56);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(45, 17);
+            this.lblCurso.TabIndex = 2;
+            this.lblCurso.Text = "Curso";
             // 
             // btnCancelar
             // 
@@ -187,6 +180,14 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // cboPuntuacion
+            // 
+            this.cboPuntuacion.FormattingEnabled = true;
+            this.cboPuntuacion.Location = new System.Drawing.Point(133, 85);
+            this.cboPuntuacion.Name = "cboPuntuacion";
+            this.cboPuntuacion.Size = new System.Drawing.Size(200, 25);
+            this.cboPuntuacion.TabIndex = 12;
+            // 
             // FrmUsuarioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -196,7 +197,7 @@ namespace TP_v3.PresentationLayer
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.grbBusqueda);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarioCurso";
             this.Text = "Registrar cursado";
             this.Load += new System.EventHandler(this.FrmUsuarioCurso_Load);
@@ -217,11 +218,11 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.Label lblFechInicio;
         private System.Windows.Forms.TextBox txtObserv;
         private System.Windows.Forms.Label lblObser;
-        private System.Windows.Forms.TextBox txtPuntuacion;
         private System.Windows.Forms.Label lblPuntuacion;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.ComboBox cboPuntuacion;
     }
 }

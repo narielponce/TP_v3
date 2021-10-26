@@ -23,6 +23,18 @@ namespace TP_v3.DataAccessLayer
 
             return (DataManager.GetInstance().EjecutarSQL(query, parametros) == 1);
         }
+        public IList<Objetivo> ObtenerObjetivosSP(string search = null)
+        {
+            List<Objetivo> listaObjetivo = new List<Objetivo>();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("@Nombre", $"%{search}%");
+            var resultadoConsulta = DataMngrSp.DataMngrSP.GetInstance().ConsultaSQL("StPr_SEL_Objetivos", parametros);
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listaObjetivo.Add(ObjectMappingUser(row));
+            }
+            return listaObjetivo;
+        }
         public IList<Objetivo> ObtenerObjetivos(string search = null)
         {
             List<Objetivo> listaObjetivo = new List<Objetivo>();
@@ -30,12 +42,12 @@ namespace TP_v3.DataAccessLayer
                                           "nombre_corto ,",
                                           "nombre_largo, ",
                                           "borrado ",
-                                          "FROM Objetivos ",
-                                          "WHERE borrado = 0 ");
+                                          "FROM Objetivos ");
+                                          //"WHERE borrado = 0 ");
 
             if (!string.IsNullOrEmpty(search))
             {
-                query += "WHERE nombre LIKE @Search OR descripcion LIKE @Search";
+                query += "WHERE nombre_corto LIKE @Search OR nombre_largo LIKE @Search";
                 var parametros = new Dictionary<string, object>();
                 parametros.Add("@Search", $"%{search}%");
                 var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(query, parametros);

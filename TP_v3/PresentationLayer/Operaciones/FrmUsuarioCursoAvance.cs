@@ -32,7 +32,7 @@ namespace TP_v3.PresentationLayer
             cbo.DataSource = source;
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
-            cbo.SelectedIndex = -1;
+            cbo.SelectedIndex = 0;
         }
         #region EVENTOS
         private void FrmUsuarioCurso_Load(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace TP_v3.PresentationLayer
         }
         private void InitializeDataGridView()
         {
-            dgvUsuarioCursos.ColumnCount = 6;
+            dgvUsuarioCursos.ColumnCount = 7;
             dgvUsuarioCursos.ColumnHeadersVisible = true;
             dgvUsuarioCursos.AutoGenerateColumns = false;
 
@@ -80,23 +80,27 @@ namespace TP_v3.PresentationLayer
 
             dgvUsuarioCursos.Columns[1].Name = "Curso";
             dgvUsuarioCursos.Columns[1].DataPropertyName = "IdCurso";
-            dgvUsuarioCursos.Columns[0].Width = 170;
+            dgvUsuarioCursos.Columns[1].Width = 140;
 
             dgvUsuarioCursos.Columns[2].Name = "Punt.";
             dgvUsuarioCursos.Columns[2].DataPropertyName = "puntuacion";
-            dgvUsuarioCursos.Columns[0].Width = 50;
+            dgvUsuarioCursos.Columns[2].Width = 50;
 
             dgvUsuarioCursos.Columns[3].Name = "Observaciones";
             dgvUsuarioCursos.Columns[3].DataPropertyName = "observacion";
-            dgvUsuarioCursos.Columns[0].Width = 100;
+            dgvUsuarioCursos.Columns[3].Width = 100;
 
             dgvUsuarioCursos.Columns[4].Name = "Inicio";
             dgvUsuarioCursos.Columns[4].DataPropertyName = "Inicio";
-            dgvUsuarioCursos.Columns[0].Width = 80;
+            dgvUsuarioCursos.Columns[4].Width = 80;
 
             dgvUsuarioCursos.Columns[5].Name = "Fin";
             dgvUsuarioCursos.Columns[5].DataPropertyName = "Fin";
-            dgvUsuarioCursos.Columns[0].Width = 80;
+            dgvUsuarioCursos.Columns[5].Width = 80;
+
+            dgvUsuarioCursos.Columns[6].Name = "Avance";
+            dgvUsuarioCursos.Columns[6].DataPropertyName = "Avance";
+            dgvUsuarioCursos.Columns[6].Width = 60;
 
             dgvUsuarioCursos.AutoResizeColumnHeadersHeight();
 

@@ -31,7 +31,7 @@ namespace TP_v3.BussinesLayer
         }
         public List<Objetivo> ObtenerObjetivos(string searchText = null)
         {
-            return (List<Objetivo>)_objetivoDao.ObtenerObjetivos(searchText);
+            return (List<Objetivo>)_objetivoDao.ObtenerObjetivosSP(searchText);
         }
         public void EliminarObjetivo(int id)
         {

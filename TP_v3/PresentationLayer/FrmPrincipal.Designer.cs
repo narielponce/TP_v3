@@ -47,6 +47,7 @@ namespace TP_v3
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pboxUser = new System.Windows.Forms.PictureBox();
+            this.listadoDeEstadosPorCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).BeginInit();
             this.SuspendLayout();
@@ -156,6 +157,8 @@ namespace TP_v3
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoDeEstadosPorCursoToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(76, 21);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -195,6 +198,13 @@ namespace TP_v3
             this.pboxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxUser.TabIndex = 2;
             this.pboxUser.TabStop = false;
+            // 
+            // listadoDeEstadosPorCursoToolStripMenuItem
+            // 
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Name = "listadoDeEstadosPorCursoToolStripMenuItem";
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Text = "Listado de estados por curso";
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Click += new System.EventHandler(this.listadoDeEstadosPorCursoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -240,6 +250,7 @@ namespace TP_v3
         private System.Windows.Forms.ToolStripMenuItem actualizaciónDeAvanceDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscripciónACursadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeAvanceCursadoPorUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeEstadosPorCursoToolStripMenuItem;
     }
 }
 

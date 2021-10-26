@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_v3.PresentationLayer;
 using TP_v3.Entities;
+using TP_v3.PresentationLayer.Reportes;
 
 namespace TP_v3
 {
@@ -85,6 +86,13 @@ namespace TP_v3
             this.WindowState = FormWindowState.Maximized;
             FrmUsuarioCursoAvance frmUsuarioCursoAvance = new FrmUsuarioCursoAvance();
             frmUsuarioCursoAvance.Show();
+        }
+
+        private void listadoDeEstadosPorCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            FrmReporte frmReporte = new FrmReporte();
+            frmReporte.Show();
         }
     }
 }
