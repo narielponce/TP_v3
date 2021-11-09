@@ -51,7 +51,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -153,16 +155,30 @@
       <DependentUpon>FrmUsuarioCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\LogUser.cs" />
+    <Compile Include="PresentationLayer\Reportes\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Reportes\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Reportes\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Reportes\FrmReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Reportes\FrmReporte.Designer.cs">
       <DependentUpon>FrmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Reportes\FrmReportEstadist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Reportes\FrmReportEstadist.Designer.cs">
+      <DependentUpon>FrmReportEstadist.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,8 +219,11 @@
     <EmbeddedResource Include="PresentationLayer\Reportes\FrmReporte.resx">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Reportes\FrmReportEstadist.resx">
+      <DependentUpon>FrmReportEstadist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Reportes\Report2.rdlc" />
     <EmbeddedResource Include="PresentationLayer\Reportes\Reporte.rdlc" />
-    <EmbeddedResource Include="PresentationLayer\Reportes\Reporte01.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -225,6 +244,17 @@
     </None>
     <None Include="PresentationLayer\Reportes\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PresentationLayer\Reportes\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PresentationLayer\Reportes\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PresentationLayer\Reportes\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\TP_v3.Entities.Categoria.datasource" />
     <None Include="Properties\DataSources\TP_v3.Entities.Curso.datasource" />

@@ -22,7 +22,7 @@ namespace TP_v3.DataAccessLayer
               //                            "FROM UsuariosCursos c ");
               //                            //"WHERE id_usuario = @Search ");
             var parametros = new Dictionary<string, object>();
-            parametros.Add("@idUsuario", user);
+            parametros.Add("@idCurso", user);
             var resultadoConsulta = DataManager.GetInstance().ConsultaSQL("SP_SEL_UsuariosCurso", parametros);
 
             foreach (DataRow row in resultadoConsulta.Rows)

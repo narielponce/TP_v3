@@ -82,8 +82,9 @@ namespace TP_v3.PresentationLayer
             //_usuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text.ToString());
             _usuarioCurso.Puntuacion = Convert.ToInt32(cboPuntuacion.SelectedItem.ToString());
             _usuarioCurso.Observacion = txtObserv.Text;
-            _usuarioCurso.Inicio = Convert.ToDateTime(dtpInicio.Value);
-            _usuarioCurso.Fin = Convert.ToDateTime(dtpFin.Value);
+            _usuarioCurso.Inicio = Convert.ToDateTime(dtpInicio.Value.Date);
+            _usuarioCurso.Fin = Convert.ToDateTime(dtpFin.Value.Date);
+            _usuarioCurso.Avance = 0;
 
             _usuariosCursoService.InsertarUsuarioCurso(_usuarioCurso);
         }

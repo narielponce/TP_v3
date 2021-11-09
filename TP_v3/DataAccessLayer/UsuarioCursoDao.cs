@@ -13,8 +13,8 @@ namespace TP_v3.DataAccessLayer
     {
         public bool InsertarUsuarioCurso(UsuariosCurso usuariosCurso)
         {
-            string query = "INSERT INTO UsuariosCurso (id_usuario, id_curso, puntuacion, observaciones, fecha_inicio, fecha_fin )" +
-                           "VALUES (@IdUsuario, @IdCurso, @Puntuacion, @Observaciones, @FechaInicio, @FechaFin )";
+            string query = "INSERT INTO UsuariosCurso (id_usuario, id_curso, puntuacion, observaciones, fecha_inicio, fecha_fin, avance )" +
+                           "VALUES (@IdUsuario, @IdCurso, @Puntuacion, @Observaciones, @FechaInicio, @FechaFin, 0 )";
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("IdUsuario", usuariosCurso.IdUsuario.idUsuario);

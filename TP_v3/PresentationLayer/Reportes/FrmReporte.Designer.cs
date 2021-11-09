@@ -31,15 +31,83 @@ namespace TP_v3.PresentationLayer.Reportes
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.grpFiltros = new System.Windows.Forms.GroupBox();
+            this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.cboCurso = new System.Windows.Forms.ComboBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.lblCurso = new System.Windows.Forms.Label();
             this.SP_SEL_UsuariosCursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new TP_v3.PresentationLayer.Reportes.DataSet1();
-            this.dataSet11 = new TP_v3.PresentationLayer.Reportes.DataSet1();
             this.SP_SEL_UsuariosCursoTableAdapter = new TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters.SP_SEL_UsuariosCursoTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.grpFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_SEL_UsuariosCursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.SP_SEL_UsuariosCursoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_v3.PresentationLayer.Reportes.Reporte.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(13, 78);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(810, 402);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // grpFiltros
+            // 
+            this.grpFiltros.Controls.Add(this.chkTodos);
+            this.grpFiltros.Controls.Add(this.cboCurso);
+            this.grpFiltros.Controls.Add(this.btnGenerar);
+            this.grpFiltros.Controls.Add(this.lblCurso);
+            this.grpFiltros.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpFiltros.Location = new System.Drawing.Point(13, 12);
+            this.grpFiltros.Name = "grpFiltros";
+            this.grpFiltros.Size = new System.Drawing.Size(810, 60);
+            this.grpFiltros.TabIndex = 1;
+            this.grpFiltros.TabStop = false;
+            this.grpFiltros.Text = "Filtros";
+            // 
+            // chkTodos
+            // 
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.Location = new System.Drawing.Point(621, 23);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(58, 20);
+            this.chkTodos.TabIndex = 4;
+            this.chkTodos.Text = "Todos";
+            this.chkTodos.UseVisualStyleBackColor = true;
+            // 
+            // cboCurso
+            // 
+            this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Location = new System.Drawing.Point(92, 25);
+            this.cboCurso.Name = "cboCurso";
+            this.cboCurso.Size = new System.Drawing.Size(121, 24);
+            this.cboCurso.TabIndex = 3;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(729, 21);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 2;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(6, 27);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(45, 17);
+            this.lblCurso.TabIndex = 0;
+            this.lblCurso.Text = "Curso";
             // 
             // SP_SEL_UsuariosCursoBindingSource
             // 
@@ -51,48 +119,38 @@ namespace TP_v3.PresentationLayer.Reportes
             this.DataSet1.DataSetName = "DataSet1";
             this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // SP_SEL_UsuariosCursoTableAdapter
             // 
             this.SP_SEL_UsuariosCursoTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.SP_SEL_UsuariosCursoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_v3.PresentationLayer.Reportes.Reporte.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(13, 13);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(763, 413);
-            this.reportViewer1.TabIndex = 0;
             // 
             // FrmReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(835, 492);
+            this.Controls.Add(this.grpFiltros);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmReporte";
-            this.Text = "Listado de estados por curso";
+            this.Text = "Listado de usuarios por curso";
             this.Load += new System.EventHandler(this.FrmReporte_Load);
+            this.grpFiltros.ResumeLayout(false);
+            this.grpFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_SEL_UsuariosCursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DataSet1 dataSet11;
         private System.Windows.Forms.BindingSource SP_SEL_UsuariosCursoBindingSource;
         private DataSet1 DataSet1;
         private DataSet1TableAdapters.SP_SEL_UsuariosCursoTableAdapter SP_SEL_UsuariosCursoTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.GroupBox grpFiltros;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Label lblCurso;
+        private System.Windows.Forms.ComboBox cboCurso;
+        private System.Windows.Forms.CheckBox chkTodos;
     }
 }

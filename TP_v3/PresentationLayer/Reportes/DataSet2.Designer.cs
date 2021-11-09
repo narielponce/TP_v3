@@ -20,17 +20,17 @@ namespace TP_v3.PresentationLayer.Reportes {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class DataSet2 : global::System.Data.DataSet {
         
-        private SP_SEL_UsuariosCursoDataTable tableSP_SEL_UsuariosCurso;
+        private StPr_CANT_POR_CURSODataTable tableStPr_CANT_POR_CURSO;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSet1() {
+        public DataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TP_v3.PresentationLayer.Reportes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TP_v3.PresentationLayer.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SP_SEL_UsuariosCurso"] != null)) {
-                    base.Tables.Add(new SP_SEL_UsuariosCursoDataTable(ds.Tables["SP_SEL_UsuariosCurso"]));
+                if ((ds.Tables["StPr_CANT_POR_CURSO"] != null)) {
+                    base.Tables.Add(new StPr_CANT_POR_CURSODataTable(ds.Tables["StPr_CANT_POR_CURSO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TP_v3.PresentationLayer.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_SEL_UsuariosCursoDataTable SP_SEL_UsuariosCurso {
+        public StPr_CANT_POR_CURSODataTable StPr_CANT_POR_CURSO {
             get {
-                return this.tableSP_SEL_UsuariosCurso;
+                return this.tableStPr_CANT_POR_CURSO;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TP_v3.PresentationLayer.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            DataSet2 cln = ((DataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TP_v3.PresentationLayer.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SP_SEL_UsuariosCurso"] != null)) {
-                    base.Tables.Add(new SP_SEL_UsuariosCursoDataTable(ds.Tables["SP_SEL_UsuariosCurso"]));
+                if ((ds.Tables["StPr_CANT_POR_CURSO"] != null)) {
+                    base.Tables.Add(new StPr_CANT_POR_CURSODataTable(ds.Tables["StPr_CANT_POR_CURSO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TP_v3.PresentationLayer.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSP_SEL_UsuariosCurso = ((SP_SEL_UsuariosCursoDataTable)(base.Tables["SP_SEL_UsuariosCurso"]));
+            this.tableStPr_CANT_POR_CURSO = ((StPr_CANT_POR_CURSODataTable)(base.Tables["StPr_CANT_POR_CURSO"]));
             if ((initTable == true)) {
-                if ((this.tableSP_SEL_UsuariosCurso != null)) {
-                    this.tableSP_SEL_UsuariosCurso.InitVars();
+                if ((this.tableStPr_CANT_POR_CURSO != null)) {
+                    this.tableStPr_CANT_POR_CURSO.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TP_v3.PresentationLayer.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "DataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSP_SEL_UsuariosCurso = new SP_SEL_UsuariosCursoDataTable();
-            base.Tables.Add(this.tableSP_SEL_UsuariosCurso);
+            this.tableStPr_CANT_POR_CURSO = new StPr_CANT_POR_CURSODataTable();
+            base.Tables.Add(this.tableStPr_CANT_POR_CURSO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeSP_SEL_UsuariosCurso() {
+        private bool ShouldSerializeStPr_CANT_POR_CURSO() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TP_v3.PresentationLayer.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            DataSet2 ds = new DataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,23 @@ namespace TP_v3.PresentationLayer.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void SP_SEL_UsuariosCursoRowChangeEventHandler(object sender, SP_SEL_UsuariosCursoRowChangeEvent e);
+        public delegate void StPr_CANT_POR_CURSORowChangeEventHandler(object sender, StPr_CANT_POR_CURSORowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_SEL_UsuariosCursoDataTable : global::System.Data.TypedTableBase<SP_SEL_UsuariosCursoRow> {
-            
-            private global::System.Data.DataColumn columnusuario;
+        public partial class StPr_CANT_POR_CURSODataTable : global::System.Data.TypedTableBase<StPr_CANT_POR_CURSORow> {
             
             private global::System.Data.DataColumn columncurso;
             
-            private global::System.Data.DataColumn columnpuntuacion;
-            
-            private global::System.Data.DataColumn columnobservaciones;
-            
-            private global::System.Data.DataColumn columnfecha_inicio;
-            
-            private global::System.Data.DataColumn columnfecha_fin;
-            
-            private global::System.Data.DataColumn columnavance;
+            private global::System.Data.DataColumn columncantidad;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoDataTable() {
-                this.TableName = "SP_SEL_UsuariosCurso";
+            public StPr_CANT_POR_CURSODataTable() {
+                this.TableName = "StPr_CANT_POR_CURSO";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +294,7 @@ namespace TP_v3.PresentationLayer.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SP_SEL_UsuariosCursoDataTable(global::System.Data.DataTable table) {
+            internal StPr_CANT_POR_CURSODataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,17 +311,9 @@ namespace TP_v3.PresentationLayer.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected SP_SEL_UsuariosCursoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected StPr_CANT_POR_CURSODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuarioColumn {
-                get {
-                    return this.columnusuario;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -344,41 +326,9 @@ namespace TP_v3.PresentationLayer.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn puntuacionColumn {
+            public global::System.Data.DataColumn cantidadColumn {
                 get {
-                    return this.columnpuntuacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn observacionesColumn {
-                get {
-                    return this.columnobservaciones;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_inicioColumn {
-                get {
-                    return this.columnfecha_inicio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_finColumn {
-                get {
-                    return this.columnfecha_fin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn avanceColumn {
-                get {
-                    return this.columnavance;
+                    return this.columncantidad;
                 }
             }
             
@@ -393,51 +343,46 @@ namespace TP_v3.PresentationLayer.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoRow this[int index] {
+            public StPr_CANT_POR_CURSORow this[int index] {
                 get {
-                    return ((SP_SEL_UsuariosCursoRow)(this.Rows[index]));
+                    return ((StPr_CANT_POR_CURSORow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_SEL_UsuariosCursoRowChangeEventHandler SP_SEL_UsuariosCursoRowChanging;
+            public event StPr_CANT_POR_CURSORowChangeEventHandler StPr_CANT_POR_CURSORowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_SEL_UsuariosCursoRowChangeEventHandler SP_SEL_UsuariosCursoRowChanged;
+            public event StPr_CANT_POR_CURSORowChangeEventHandler StPr_CANT_POR_CURSORowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_SEL_UsuariosCursoRowChangeEventHandler SP_SEL_UsuariosCursoRowDeleting;
+            public event StPr_CANT_POR_CURSORowChangeEventHandler StPr_CANT_POR_CURSORowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_SEL_UsuariosCursoRowChangeEventHandler SP_SEL_UsuariosCursoRowDeleted;
+            public event StPr_CANT_POR_CURSORowChangeEventHandler StPr_CANT_POR_CURSORowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddSP_SEL_UsuariosCursoRow(SP_SEL_UsuariosCursoRow row) {
+            public void AddStPr_CANT_POR_CURSORow(StPr_CANT_POR_CURSORow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoRow AddSP_SEL_UsuariosCursoRow(string usuario, string curso, int puntuacion, string observaciones, System.DateTime fecha_inicio, System.DateTime fecha_fin, int avance) {
-                SP_SEL_UsuariosCursoRow rowSP_SEL_UsuariosCursoRow = ((SP_SEL_UsuariosCursoRow)(this.NewRow()));
+            public StPr_CANT_POR_CURSORow AddStPr_CANT_POR_CURSORow(string curso, int cantidad) {
+                StPr_CANT_POR_CURSORow rowStPr_CANT_POR_CURSORow = ((StPr_CANT_POR_CURSORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        usuario,
                         curso,
-                        puntuacion,
-                        observaciones,
-                        fecha_inicio,
-                        fecha_fin,
-                        avance};
-                rowSP_SEL_UsuariosCursoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_SEL_UsuariosCursoRow);
-                return rowSP_SEL_UsuariosCursoRow;
+                        cantidad};
+                rowStPr_CANT_POR_CURSORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStPr_CANT_POR_CURSORow);
+                return rowStPr_CANT_POR_CURSORow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_SEL_UsuariosCursoDataTable cln = ((SP_SEL_UsuariosCursoDataTable)(base.Clone()));
+                StPr_CANT_POR_CURSODataTable cln = ((StPr_CANT_POR_CURSODataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -445,68 +390,51 @@ namespace TP_v3.PresentationLayer.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_SEL_UsuariosCursoDataTable();
+                return new StPr_CANT_POR_CURSODataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnusuario = base.Columns["usuario"];
                 this.columncurso = base.Columns["curso"];
-                this.columnpuntuacion = base.Columns["puntuacion"];
-                this.columnobservaciones = base.Columns["observaciones"];
-                this.columnfecha_inicio = base.Columns["fecha_inicio"];
-                this.columnfecha_fin = base.Columns["fecha_fin"];
-                this.columnavance = base.Columns["avance"];
+                this.columncantidad = base.Columns["cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario);
                 this.columncurso = new global::System.Data.DataColumn("curso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurso);
-                this.columnpuntuacion = new global::System.Data.DataColumn("puntuacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpuntuacion);
-                this.columnobservaciones = new global::System.Data.DataColumn("observaciones", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnobservaciones);
-                this.columnfecha_inicio = new global::System.Data.DataColumn("fecha_inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_inicio);
-                this.columnfecha_fin = new global::System.Data.DataColumn("fecha_fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_fin);
-                this.columnavance = new global::System.Data.DataColumn("avance", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnavance);
-                this.columnusuario.AllowDBNull = false;
-                this.columnusuario.MaxLength = 50;
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
                 this.columncurso.MaxLength = 50;
-                this.columnobservaciones.MaxLength = 150;
+                this.columncantidad.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoRow NewSP_SEL_UsuariosCursoRow() {
-                return ((SP_SEL_UsuariosCursoRow)(this.NewRow()));
+            public StPr_CANT_POR_CURSORow NewStPr_CANT_POR_CURSORow() {
+                return ((StPr_CANT_POR_CURSORow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_SEL_UsuariosCursoRow(builder);
+                return new StPr_CANT_POR_CURSORow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_SEL_UsuariosCursoRow);
+                return typeof(StPr_CANT_POR_CURSORow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_SEL_UsuariosCursoRowChanged != null)) {
-                    this.SP_SEL_UsuariosCursoRowChanged(this, new SP_SEL_UsuariosCursoRowChangeEvent(((SP_SEL_UsuariosCursoRow)(e.Row)), e.Action));
+                if ((this.StPr_CANT_POR_CURSORowChanged != null)) {
+                    this.StPr_CANT_POR_CURSORowChanged(this, new StPr_CANT_POR_CURSORowChangeEvent(((StPr_CANT_POR_CURSORow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,8 +442,8 @@ namespace TP_v3.PresentationLayer.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_SEL_UsuariosCursoRowChanging != null)) {
-                    this.SP_SEL_UsuariosCursoRowChanging(this, new SP_SEL_UsuariosCursoRowChangeEvent(((SP_SEL_UsuariosCursoRow)(e.Row)), e.Action));
+                if ((this.StPr_CANT_POR_CURSORowChanging != null)) {
+                    this.StPr_CANT_POR_CURSORowChanging(this, new StPr_CANT_POR_CURSORowChangeEvent(((StPr_CANT_POR_CURSORow)(e.Row)), e.Action));
                 }
             }
             
@@ -523,8 +451,8 @@ namespace TP_v3.PresentationLayer.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_SEL_UsuariosCursoRowDeleted != null)) {
-                    this.SP_SEL_UsuariosCursoRowDeleted(this, new SP_SEL_UsuariosCursoRowChangeEvent(((SP_SEL_UsuariosCursoRow)(e.Row)), e.Action));
+                if ((this.StPr_CANT_POR_CURSORowDeleted != null)) {
+                    this.StPr_CANT_POR_CURSORowDeleted(this, new StPr_CANT_POR_CURSORowChangeEvent(((StPr_CANT_POR_CURSORow)(e.Row)), e.Action));
                 }
             }
             
@@ -532,14 +460,14 @@ namespace TP_v3.PresentationLayer.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_SEL_UsuariosCursoRowDeleting != null)) {
-                    this.SP_SEL_UsuariosCursoRowDeleting(this, new SP_SEL_UsuariosCursoRowChangeEvent(((SP_SEL_UsuariosCursoRow)(e.Row)), e.Action));
+                if ((this.StPr_CANT_POR_CURSORowDeleting != null)) {
+                    this.StPr_CANT_POR_CURSORowDeleting(this, new StPr_CANT_POR_CURSORowChangeEvent(((StPr_CANT_POR_CURSORow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveSP_SEL_UsuariosCursoRow(SP_SEL_UsuariosCursoRow row) {
+            public void RemoveStPr_CANT_POR_CURSORow(StPr_CANT_POR_CURSORow row) {
                 this.Rows.Remove(row);
             }
             
@@ -548,7 +476,7 @@ namespace TP_v3.PresentationLayer.Reportes {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                DataSet2 ds = new DataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -566,7 +494,7 @@ namespace TP_v3.PresentationLayer.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_SEL_UsuariosCursoDataTable";
+                attribute2.FixedValue = "StPr_CANT_POR_CURSODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -610,26 +538,15 @@ namespace TP_v3.PresentationLayer.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_SEL_UsuariosCursoRow : global::System.Data.DataRow {
+        public partial class StPr_CANT_POR_CURSORow : global::System.Data.DataRow {
             
-            private SP_SEL_UsuariosCursoDataTable tableSP_SEL_UsuariosCurso;
+            private StPr_CANT_POR_CURSODataTable tableStPr_CANT_POR_CURSO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SP_SEL_UsuariosCursoRow(global::System.Data.DataRowBuilder rb) : 
+            internal StPr_CANT_POR_CURSORow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSP_SEL_UsuariosCurso = ((SP_SEL_UsuariosCursoDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string usuario {
-                get {
-                    return ((string)(this[this.tableSP_SEL_UsuariosCurso.usuarioColumn]));
-                }
-                set {
-                    this[this.tableSP_SEL_UsuariosCurso.usuarioColumn] = value;
-                }
+                this.tableStPr_CANT_POR_CURSO = ((StPr_CANT_POR_CURSODataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -637,170 +554,55 @@ namespace TP_v3.PresentationLayer.Reportes {
             public string curso {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_SEL_UsuariosCurso.cursoColumn]));
+                        return ((string)(this[this.tableStPr_CANT_POR_CURSO.cursoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'curso\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'curso\' de la tabla \'StPr_CANT_POR_CURSO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_SEL_UsuariosCurso.cursoColumn] = value;
+                    this[this.tableStPr_CANT_POR_CURSO.cursoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int puntuacion {
+            public int cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_SEL_UsuariosCurso.puntuacionColumn]));
+                        return ((int)(this[this.tableStPr_CANT_POR_CURSO.cantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'puntuacion\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'StPr_CANT_POR_CURSO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_SEL_UsuariosCurso.puntuacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string observaciones {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_SEL_UsuariosCurso.observacionesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'observaciones\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SEL_UsuariosCurso.observacionesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_inicio {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_SEL_UsuariosCurso.fecha_inicioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_inicio\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SEL_UsuariosCurso.fecha_inicioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_fin {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_SEL_UsuariosCurso.fecha_finColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_fin\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SEL_UsuariosCurso.fecha_finColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int avance {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_SEL_UsuariosCurso.avanceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'avance\' de la tabla \'SP_SEL_UsuariosCurso\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SEL_UsuariosCurso.avanceColumn] = value;
+                    this[this.tableStPr_CANT_POR_CURSO.cantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscursoNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.cursoColumn);
+                return this.IsNull(this.tableStPr_CANT_POR_CURSO.cursoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcursoNull() {
-                this[this.tableSP_SEL_UsuariosCurso.cursoColumn] = global::System.Convert.DBNull;
+                this[this.tableStPr_CANT_POR_CURSO.cursoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IspuntuacionNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.puntuacionColumn);
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableStPr_CANT_POR_CURSO.cantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetpuntuacionNull() {
-                this[this.tableSP_SEL_UsuariosCurso.puntuacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsobservacionesNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.observacionesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetobservacionesNull() {
-                this[this.tableSP_SEL_UsuariosCurso.observacionesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_inicioNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.fecha_inicioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_inicioNull() {
-                this[this.tableSP_SEL_UsuariosCurso.fecha_inicioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_finNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.fecha_finColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_finNull() {
-                this[this.tableSP_SEL_UsuariosCurso.fecha_finColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsavanceNull() {
-                return this.IsNull(this.tableSP_SEL_UsuariosCurso.avanceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetavanceNull() {
-                this[this.tableSP_SEL_UsuariosCurso.avanceColumn] = global::System.Convert.DBNull;
+            public void SetcantidadNull() {
+                this[this.tableStPr_CANT_POR_CURSO.cantidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -808,22 +610,22 @@ namespace TP_v3.PresentationLayer.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class SP_SEL_UsuariosCursoRowChangeEvent : global::System.EventArgs {
+        public class StPr_CANT_POR_CURSORowChangeEvent : global::System.EventArgs {
             
-            private SP_SEL_UsuariosCursoRow eventRow;
+            private StPr_CANT_POR_CURSORow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoRowChangeEvent(SP_SEL_UsuariosCursoRow row, global::System.Data.DataRowAction action) {
+            public StPr_CANT_POR_CURSORowChangeEvent(StPr_CANT_POR_CURSORow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_SEL_UsuariosCursoRow Row {
+            public StPr_CANT_POR_CURSORow Row {
                 get {
                     return this.eventRow;
                 }
@@ -839,7 +641,7 @@ namespace TP_v3.PresentationLayer.Reportes {
         }
     }
 }
-namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
+namespace TP_v3.PresentationLayer.Reportes.DataSet2TableAdapters {
     
     
     /// <summary>
@@ -851,7 +653,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_SEL_UsuariosCursoTableAdapter : global::System.ComponentModel.Component {
+    public partial class StPr_CANT_POR_CURSOTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -865,7 +667,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SP_SEL_UsuariosCursoTableAdapter() {
+        public StPr_CANT_POR_CURSOTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -962,14 +764,9 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_SEL_UsuariosCurso";
-            tableMapping.ColumnMappings.Add("usuario", "usuario");
+            tableMapping.DataSetTable = "StPr_CANT_POR_CURSO";
             tableMapping.ColumnMappings.Add("curso", "curso");
-            tableMapping.ColumnMappings.Add("puntuacion", "puntuacion");
-            tableMapping.ColumnMappings.Add("observaciones", "observaciones");
-            tableMapping.ColumnMappings.Add("fecha_inicio", "fecha_inicio");
-            tableMapping.ColumnMappings.Add("fecha_fin", "fecha_fin");
-            tableMapping.ColumnMappings.Add("avance", "avance");
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -986,24 +783,17 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_SEL_CursoUsuarios";
+            this._commandCollection[0].CommandText = "dbo.StPr_CANT_POR_CURSO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCurso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.SP_SEL_UsuariosCursoDataTable dataTable, global::System.Nullable<int> IdCurso) {
+        public virtual int Fill(DataSet2.StPr_CANT_POR_CURSODataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IdCurso.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdCurso.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1015,15 +805,9 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.SP_SEL_UsuariosCursoDataTable GetData(global::System.Nullable<int> IdCurso) {
+        public virtual DataSet2.StPr_CANT_POR_CURSODataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((IdCurso.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdCurso.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            DataSet1.SP_SEL_UsuariosCursoDataTable dataTable = new DataSet1.SP_SEL_UsuariosCursoDataTable();
+            DataSet2.StPr_CANT_POR_CURSODataTable dataTable = new DataSet2.StPr_CANT_POR_CURSODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1097,7 +881,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1107,7 +891,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1117,7 +901,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1151,7 +935,7 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSet1 dataSet) {
+        public virtual int UpdateAll(DataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

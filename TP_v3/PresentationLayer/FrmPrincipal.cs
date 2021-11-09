@@ -94,5 +94,12 @@ namespace TP_v3
             FrmReporte frmReporte = new FrmReporte();
             frmReporte.Show();
         }
+
+        private void estadisticasVariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            FrmReportEstadist frmReportEstadist = new FrmReportEstadist();
+            frmReportEstadist.Show();
+        }
     }
 }

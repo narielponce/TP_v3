@@ -43,11 +43,12 @@ namespace TP_v3
             this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeEstadosPorCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticasVariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pboxUser = new System.Windows.Forms.PictureBox();
-            this.listadoDeEstadosPorCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).BeginInit();
             this.SuspendLayout();
@@ -158,10 +159,25 @@ namespace TP_v3
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listadoDeEstadosPorCursoToolStripMenuItem});
+            this.listadoDeEstadosPorCursoToolStripMenuItem,
+            this.estadisticasVariasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(76, 21);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // listadoDeEstadosPorCursoToolStripMenuItem
+            // 
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Name = "listadoDeEstadosPorCursoToolStripMenuItem";
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Text = "Listado de usuarios por curso";
+            this.listadoDeEstadosPorCursoToolStripMenuItem.Click += new System.EventHandler(this.listadoDeEstadosPorCursoToolStripMenuItem_Click);
+            // 
+            // estadisticasVariasToolStripMenuItem
+            // 
+            this.estadisticasVariasToolStripMenuItem.Name = "estadisticasVariasToolStripMenuItem";
+            this.estadisticasVariasToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.estadisticasVariasToolStripMenuItem.Text = "Estadisticas varias";
+            this.estadisticasVariasToolStripMenuItem.Click += new System.EventHandler(this.estadisticasVariasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -199,20 +215,13 @@ namespace TP_v3
             this.pboxUser.TabIndex = 2;
             this.pboxUser.TabStop = false;
             // 
-            // listadoDeEstadosPorCursoToolStripMenuItem
-            // 
-            this.listadoDeEstadosPorCursoToolStripMenuItem.Name = "listadoDeEstadosPorCursoToolStripMenuItem";
-            this.listadoDeEstadosPorCursoToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.listadoDeEstadosPorCursoToolStripMenuItem.Text = "Listado de estados por curso";
-            this.listadoDeEstadosPorCursoToolStripMenuItem.Click += new System.EventHandler(this.listadoDeEstadosPorCursoToolStripMenuItem_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.ClientSize = new System.Drawing.Size(1028, 588);
             this.Controls.Add(this.pboxUser);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.menuStrip1);
@@ -251,6 +260,7 @@ namespace TP_v3
         private System.Windows.Forms.ToolStripMenuItem inscripciónACursadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeAvanceCursadoPorUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeEstadosPorCursoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadisticasVariasToolStripMenuItem;
     }
 }
 
