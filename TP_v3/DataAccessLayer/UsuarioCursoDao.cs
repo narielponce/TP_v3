@@ -80,7 +80,6 @@ namespace TP_v3.DataAccessLayer
 
             oUsuariosCurso.IdUsuario = new Usuario();
             //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["id_usuario"].ToString());
-            //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["usuario"].ToString());
             oUsuariosCurso.IdUsuario.nombreUsuario = row["usuario"].ToString();
 
             oUsuariosCurso.IdCurso = new Curso();

@@ -136,6 +136,7 @@ namespace TP_v3.PresentationLayer
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             var cursoSel2 = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
             //Creamos un nuevo objeto "usuarioCursoAvance" con los datos que estan cargado en el Form
             UsuariosCursoAvance usuariosCursoAvance = new UsuariosCursoAvance();
