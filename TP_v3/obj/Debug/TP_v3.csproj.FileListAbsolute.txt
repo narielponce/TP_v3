@@ -178,4 +178,5 @@ D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.csproj.CoreCompileInputs.cache
 D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.csproj.CopyComplete
 D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.exe
 D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.pdb
-D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.Reportes.FrmReportEstadist.resources
+D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.Reportes.dtpHasta.resources
+D:\PAV\TP_v3\TP_v3\TP_v3\obj\Debug\TP_v3.PresentationLayer.FrmFechaCurso.resources

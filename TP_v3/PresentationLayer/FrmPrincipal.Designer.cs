@@ -41,7 +41,6 @@ namespace TP_v3
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inscripciónACursadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeEstadosPorCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasVariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,7 @@ namespace TP_v3
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pboxUser = new System.Windows.Forms.PictureBox();
+            this.fechasDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).BeginInit();
             this.SuspendLayout();
@@ -99,29 +99,30 @@ namespace TP_v3
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cursosToolStripMenuItem,
             this.categoríasToolStripMenuItem,
-            this.objetivosToolStripMenuItem});
+            this.objetivosToolStripMenuItem,
+            this.fechasDeCursosToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem.Text = "ABM\'s";
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
             // objetivosToolStripMenuItem
             // 
             this.objetivosToolStripMenuItem.Name = "objetivosToolStripMenuItem";
-            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.objetivosToolStripMenuItem.Text = "Objetivos";
             this.objetivosToolStripMenuItem.Click += new System.EventHandler(this.objetivosToolStripMenuItem_Click);
             // 
@@ -129,8 +130,7 @@ namespace TP_v3
             // 
             this.transaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inscripciónACursadoToolStripMenuItem,
-            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem,
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem});
+            this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
             this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(102, 21);
             this.transaccionesToolStripMenuItem.Text = "Operaciones";
@@ -148,13 +148,6 @@ namespace TP_v3
             this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(334, 22);
             this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Text = "Registro de avance cursado por usuario";
             this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registroDeAvanceCursadoPorUsuarioToolStripMenuItem_Click);
-            // 
-            // actualizaciónDeAvanceDeUsuariosToolStripMenuItem
-            // 
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Name = "actualizaciónDeAvanceDeUsuariosToolStripMenuItem";
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(334, 22);
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Text = "Actualización de avance de usuarios";
-            this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.actualizaciónDeAvanceDeUsuariosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -215,6 +208,13 @@ namespace TP_v3
             this.pboxUser.TabIndex = 2;
             this.pboxUser.TabStop = false;
             // 
+            // fechasDeCursosToolStripMenuItem
+            // 
+            this.fechasDeCursosToolStripMenuItem.Name = "fechasDeCursosToolStripMenuItem";
+            this.fechasDeCursosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.fechasDeCursosToolStripMenuItem.Text = "Fechas de cursos";
+            this.fechasDeCursosToolStripMenuItem.Click += new System.EventHandler(this.fechasDeCursosToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -256,11 +256,11 @@ namespace TP_v3
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.PictureBox pboxUser;
         private System.Windows.Forms.ToolStripMenuItem objetivosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizaciónDeAvanceDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscripciónACursadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeAvanceCursadoPorUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeEstadosPorCursoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadisticasVariasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fechasDeCursosToolStripMenuItem;
     }
 }
 

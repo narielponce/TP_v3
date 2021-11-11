@@ -32,6 +32,7 @@ namespace TP_v3.PresentationLayer
             this.lblUsuario = new System.Windows.Forms.Label();
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.grbBusqueda = new System.Windows.Forms.GroupBox();
+            this.cboPuntuacion = new System.Windows.Forms.ComboBox();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace TP_v3.PresentationLayer
             this.lblCurso = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.cboPuntuacion = new System.Windows.Forms.ComboBox();
             this.grbBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,14 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.TabIndex = 2;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Datos";
+            // 
+            // cboPuntuacion
+            // 
+            this.cboPuntuacion.FormattingEnabled = true;
+            this.cboPuntuacion.Location = new System.Drawing.Point(133, 85);
+            this.cboPuntuacion.Name = "cboPuntuacion";
+            this.cboPuntuacion.Size = new System.Drawing.Size(200, 25);
+            this.cboPuntuacion.TabIndex = 12;
             // 
             // dtpFin
             // 
@@ -180,14 +188,6 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // cboPuntuacion
-            // 
-            this.cboPuntuacion.FormattingEnabled = true;
-            this.cboPuntuacion.Location = new System.Drawing.Point(133, 85);
-            this.cboPuntuacion.Name = "cboPuntuacion";
-            this.cboPuntuacion.Size = new System.Drawing.Size(200, 25);
-            this.cboPuntuacion.TabIndex = 12;
-            // 
             // FrmUsuarioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -199,7 +199,7 @@ namespace TP_v3.PresentationLayer
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarioCurso";
-            this.Text = "Registrar cursado";
+            this.Text = "Inscripcion a cursado";
             this.Load += new System.EventHandler(this.FrmUsuarioCurso_Load);
             this.grbBusqueda.ResumeLayout(false);
             this.grbBusqueda.PerformLayout();

@@ -112,6 +112,12 @@
     <Compile Include="PresentationLayer\FrmAvanceUser.Designer.cs">
       <DependentUpon>FrmAvanceUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmFechaCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmFechaCurso.Designer.cs">
+      <DependentUpon>FrmFechaCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmObjetivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmAvanceUser.resx">
       <DependentUpon>FrmAvanceUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmFechaCurso.resx">
+      <DependentUpon>FrmFechaCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmObjetivo.resx">
       <DependentUpon>FrmObjetivo.cs</DependentUpon>

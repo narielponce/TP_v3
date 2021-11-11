@@ -98,8 +98,15 @@ namespace TP_v3
         private void estadisticasVariasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            FrmReportEstadist frmReportEstadist = new FrmReportEstadist();
+            dtpHasta frmReportEstadist = new dtpHasta();
             frmReportEstadist.Show();
+        }
+
+        private void fechasDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            FrmFechaCurso frmFechaCurso = new FrmFechaCurso();
+            frmFechaCurso.Show();
         }
     }
 }

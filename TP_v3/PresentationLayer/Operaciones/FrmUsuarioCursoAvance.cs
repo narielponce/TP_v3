@@ -25,7 +25,12 @@ namespace TP_v3.PresentationLayer
             _usuariosCursoService = new UsuariosCursoService();
             //_usuariosCurso = new UsuariosCurso();
             InitializeDataGridView();
-
+            //LlenarCboAvance();
+            txtUsuario.Enabled = false;
+            txtCurso.Enabled = false;
+            txtPuntuacion.Enabled = false;
+            dateTimePicker1.Enabled = false;
+            dtpInicio.Enabled = false;
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
@@ -34,6 +39,19 @@ namespace TP_v3.PresentationLayer
             cbo.ValueMember = value;
             cbo.SelectedIndex = 0;
         }
+        //private void LlenarCboAvance()
+        //{
+        //    cboPorcAvan.Items.Add(10);
+        //    cboPorcAvan.Items.Add(20);
+        //    cboPorcAvan.Items.Add(30);
+        //    cboPorcAvan.Items.Add(40);
+        //    cboPorcAvan.Items.Add(50);
+        //    cboPorcAvan.Items.Add(60);
+        //    cboPorcAvan.Items.Add(70);
+        //    cboPorcAvan.Items.Add(80);
+        //    cboPorcAvan.Items.Add(90);
+        //    cboPorcAvan.Items.Add(100);
+       //}
         #region EVENTOS
         private void FrmUsuarioCurso_Load(object sender, EventArgs e)
         {
@@ -47,13 +65,6 @@ namespace TP_v3.PresentationLayer
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             int IdUser = Convert.ToInt32(cboUsuario.SelectedValue.ToString());
-            //ConsultarUsuarioCurso(user);
-            //Dictionary<string, object> parametros = new Dictionary<string, object>();
-            //if (!string.IsNullOrEmpty(cboUsuario.Text))
-            //{
-            //    var idUsuario = cboUsuario.SelectedValue.ToString();
-            //    parametros.Add("idUsuario", idUsuario);
-            //}
             IList<UsuariosCurso> listadoUsuariosCurso = _usuariosCursoService.ConsultarUsuarioCursoPorId(IdUser);
             dgvUsuarioCursos.DataSource = listadoUsuariosCurso;
             if(dgvUsuarioCursos.Rows.Count == 0)
@@ -107,6 +118,21 @@ namespace TP_v3.PresentationLayer
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
             dgvUsuarioCursos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+        }
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            var cursoSel = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
+            txtUsuario.Text = cursoSel.IdUsuario.nombreUsuario;
+            txtCurso.Text = cursoSel.IdCurso.nombre;
+            txtPuntuacion.Text = cursoSel.Puntuacion.ToString();
+            dateTimePicker1.Value = cursoSel.Inicio;
+            dtpInicio.Value = cursoSel.Fin;
+            txtAvance.Text = cursoSel.Avance.ToString();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

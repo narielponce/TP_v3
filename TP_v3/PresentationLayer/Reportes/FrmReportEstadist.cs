@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_v3.PresentationLayer.Reportes
 {
-    public partial class FrmReportEstadist : Form
+    public partial class dtpHasta : Form
     {
-        public FrmReportEstadist()
+        public dtpHasta()
         {
             InitializeComponent();
         }

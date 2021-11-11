@@ -32,9 +32,8 @@ namespace TP_v3.PresentationLayer
             this.lblUsuarioSearch = new System.Windows.Forms.Label();
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.grbBusqueda = new System.Windows.Forms.GroupBox();
-            this.dgvUsuarioCursos = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.cboPorcAvan = new System.Windows.Forms.ComboBox();
+            this.dgvUsuarioCursos = new System.Windows.Forms.DataGridView();
             this.lblPorcAvance = new System.Windows.Forms.Label();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFin = new System.Windows.Forms.Label();
@@ -42,15 +41,16 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.grpRegistrar = new System.Windows.Forms.GroupBox();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblPuntuacion = new System.Windows.Forms.Label();
-            this.txtPuntuacion = new System.Windows.Forms.TextBox();
-            this.txtCurso = new System.Windows.Forms.TextBox();
-            this.lblCurso = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtCurso = new System.Windows.Forms.TextBox();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.txtPuntuacion = new System.Windows.Forms.TextBox();
+            this.lblPuntuacion = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
             this.grpCursosSel = new System.Windows.Forms.GroupBox();
+            this.txtAvance = new System.Windows.Forms.TextBox();
             this.grbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCursos)).BeginInit();
             this.grpRegistrar.SuspendLayout();
@@ -86,14 +86,6 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Buscar";
             // 
-            // dgvUsuarioCursos
-            // 
-            this.dgvUsuarioCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarioCursos.Location = new System.Drawing.Point(9, 22);
-            this.dgvUsuarioCursos.Name = "dgvUsuarioCursos";
-            this.dgvUsuarioCursos.Size = new System.Drawing.Size(683, 147);
-            this.dgvUsuarioCursos.TabIndex = 15;
-            // 
             // btnConsultar
             // 
             this.btnConsultar.Location = new System.Drawing.Point(374, 22);
@@ -104,13 +96,13 @@ namespace TP_v3.PresentationLayer
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // cboPorcAvan
+            // dgvUsuarioCursos
             // 
-            this.cboPorcAvan.FormattingEnabled = true;
-            this.cboPorcAvan.Location = new System.Drawing.Point(114, 177);
-            this.cboPorcAvan.Name = "cboPorcAvan";
-            this.cboPorcAvan.Size = new System.Drawing.Size(264, 24);
-            this.cboPorcAvan.TabIndex = 13;
+            this.dgvUsuarioCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarioCursos.Location = new System.Drawing.Point(9, 22);
+            this.dgvUsuarioCursos.Name = "dgvUsuarioCursos";
+            this.dgvUsuarioCursos.Size = new System.Drawing.Size(683, 147);
+            this.dgvUsuarioCursos.TabIndex = 15;
             // 
             // lblPorcAvance
             // 
@@ -159,6 +151,7 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnSelect
             // 
@@ -168,9 +161,11 @@ namespace TP_v3.PresentationLayer
             this.btnSelect.TabIndex = 14;
             this.btnSelect.Text = "Seleccionar";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // grpRegistrar
             // 
+            this.grpRegistrar.Controls.Add(this.txtAvance);
             this.grpRegistrar.Controls.Add(this.txtUsuario);
             this.grpRegistrar.Controls.Add(this.lblUsuario);
             this.grpRegistrar.Controls.Add(this.btnCancelar);
@@ -181,7 +176,6 @@ namespace TP_v3.PresentationLayer
             this.grpRegistrar.Controls.Add(this.lblPuntuacion);
             this.grpRegistrar.Controls.Add(this.dateTimePicker1);
             this.grpRegistrar.Controls.Add(this.lblFechaInicio);
-            this.grpRegistrar.Controls.Add(this.cboPorcAvan);
             this.grpRegistrar.Controls.Add(this.lblFechaFin);
             this.grpRegistrar.Controls.Add(this.dtpInicio);
             this.grpRegistrar.Controls.Add(this.lblPorcAvance);
@@ -192,57 +186,6 @@ namespace TP_v3.PresentationLayer
             this.grpRegistrar.TabIndex = 15;
             this.grpRegistrar.TabStop = false;
             this.grpRegistrar.Text = "Actualización de avance";
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.Location = new System.Drawing.Point(6, 118);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(85, 17);
-            this.lblFechaInicio.TabIndex = 14;
-            this.lblFechaInicio.Text = "Fecha inicio";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 118);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(264, 21);
-            this.dateTimePicker1.TabIndex = 15;
-            // 
-            // lblPuntuacion
-            // 
-            this.lblPuntuacion.AutoSize = true;
-            this.lblPuntuacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuntuacion.Location = new System.Drawing.Point(6, 85);
-            this.lblPuntuacion.Name = "lblPuntuacion";
-            this.lblPuntuacion.Size = new System.Drawing.Size(82, 17);
-            this.lblPuntuacion.TabIndex = 16;
-            this.lblPuntuacion.Text = "Puntuación";
-            // 
-            // txtPuntuacion
-            // 
-            this.txtPuntuacion.Location = new System.Drawing.Point(114, 85);
-            this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(264, 21);
-            this.txtPuntuacion.TabIndex = 17;
-            // 
-            // txtCurso
-            // 
-            this.txtCurso.Location = new System.Drawing.Point(114, 56);
-            this.txtCurso.Name = "txtCurso";
-            this.txtCurso.Size = new System.Drawing.Size(264, 21);
-            this.txtCurso.TabIndex = 19;
-            // 
-            // lblCurso
-            // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(6, 56);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(45, 17);
-            this.lblCurso.TabIndex = 18;
-            this.lblCurso.Text = "Curso";
             // 
             // txtUsuario
             // 
@@ -261,6 +204,57 @@ namespace TP_v3.PresentationLayer
             this.lblUsuario.TabIndex = 20;
             this.lblUsuario.Text = "Usuario";
             // 
+            // txtCurso
+            // 
+            this.txtCurso.Location = new System.Drawing.Point(114, 56);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(264, 21);
+            this.txtCurso.TabIndex = 19;
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(6, 56);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(45, 17);
+            this.lblCurso.TabIndex = 18;
+            this.lblCurso.Text = "Curso";
+            // 
+            // txtPuntuacion
+            // 
+            this.txtPuntuacion.Location = new System.Drawing.Point(114, 85);
+            this.txtPuntuacion.Name = "txtPuntuacion";
+            this.txtPuntuacion.Size = new System.Drawing.Size(264, 21);
+            this.txtPuntuacion.TabIndex = 17;
+            // 
+            // lblPuntuacion
+            // 
+            this.lblPuntuacion.AutoSize = true;
+            this.lblPuntuacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntuacion.Location = new System.Drawing.Point(6, 85);
+            this.lblPuntuacion.Name = "lblPuntuacion";
+            this.lblPuntuacion.Size = new System.Drawing.Size(82, 17);
+            this.lblPuntuacion.TabIndex = 16;
+            this.lblPuntuacion.Text = "Puntuación";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(114, 118);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(264, 21);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.Location = new System.Drawing.Point(6, 118);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(85, 17);
+            this.lblFechaInicio.TabIndex = 14;
+            this.lblFechaInicio.Text = "Fecha inicio";
+            // 
             // grpCursosSel
             // 
             this.grpCursosSel.Controls.Add(this.dgvUsuarioCursos);
@@ -270,6 +264,13 @@ namespace TP_v3.PresentationLayer
             this.grpCursosSel.TabIndex = 16;
             this.grpCursosSel.TabStop = false;
             this.grpCursosSel.Text = "Cursos seleccionados";
+            // 
+            // txtAvance
+            // 
+            this.txtAvance.Location = new System.Drawing.Point(114, 180);
+            this.txtAvance.Name = "txtAvance";
+            this.txtAvance.Size = new System.Drawing.Size(100, 21);
+            this.txtAvance.TabIndex = 22;
             // 
             // FrmUsuarioCursoAvance
             // 
@@ -304,7 +305,6 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.ComboBox cboPorcAvan;
         private System.Windows.Forms.Label lblPorcAvance;
         private System.Windows.Forms.DataGridView dgvUsuarioCursos;
         private System.Windows.Forms.Button btnConsultar;
@@ -319,5 +319,6 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.GroupBox grpCursosSel;
+        private System.Windows.Forms.TextBox txtAvance;
     }
 }
