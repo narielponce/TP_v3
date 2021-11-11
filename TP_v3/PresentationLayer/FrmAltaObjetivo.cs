@@ -34,7 +34,7 @@ namespace TP_v3.PresentationLayer
         #region METODOS PRIVADOS
         private void GrabarObjetivo()
         {
-            //Creamos un nuevo objeto "categoria" con los datos que estan cargado en el Form
+            //Creamos un nuevo objeto "Objetivo" con los datos que estan cargado en el Form
             Objetivo objetivo = new Objetivo();
             objetivo.nombreCorto = txtNombObjCorto.Text;
             objetivo.nombreLargo = txtNombObjLargo.Text;

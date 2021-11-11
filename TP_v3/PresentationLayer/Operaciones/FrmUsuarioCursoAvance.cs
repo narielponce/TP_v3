@@ -15,14 +15,18 @@ namespace TP_v3.PresentationLayer
     public partial class FrmUsuarioCursoAvance : Form
     {
         //private readonly CursoService _cursoService;
-        //private readonly UsuariosCurso _usuariosCurso;
+        private readonly UsuariosCurso _usuariosCurso;
         private readonly UsuarioService _usuarioService;
         private readonly UsuariosCursoService _usuariosCursoService;
+        private readonly UsuarioCursoAvanceService _usuarioCursoAvanceService;
+        private readonly UsuariosCursoAvance _usuariosCursoAvance;
         public FrmUsuarioCursoAvance()
         {
             InitializeComponent();
             _usuarioService = new UsuarioService();
             _usuariosCursoService = new UsuariosCursoService();
+            _usuarioCursoAvanceService = new UsuarioCursoAvanceService();
+            _usuariosCursoAvance = new UsuariosCursoAvance();
             //_usuariosCurso = new UsuariosCurso();
             InitializeDataGridView();
             //LlenarCboAvance();
@@ -132,7 +136,17 @@ namespace TP_v3.PresentationLayer
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            var cursoSel2 = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
+            //Creamos un nuevo objeto "usuarioCursoAvance" con los datos que estan cargado en el Form
+            UsuariosCursoAvance usuariosCursoAvance = new UsuariosCursoAvance();
+            usuariosCursoAvance.idUsuario.idUsuario = cursoSel2.IdUsuario.idUsuario;
+            usuariosCursoAvance.idCurso.idCurso = cursoSel2.IdCurso.idCurso;
+            usuariosCursoAvance.inicio = cursoSel2.Inicio;
+            usuariosCursoAvance.fin = cursoSel2.Fin;
+            usuariosCursoAvance.porcAvance = int.Parse(txtAvance.Text);
 
+            //Ahora llamamos a la capa de negocio
+            _usuarioCursoAvanceService.GrabarAvance(_usuariosCursoAvance);
         }
     }
 }
