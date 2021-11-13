@@ -17,9 +17,9 @@ namespace TP_v3.BussinesLayer
             _usuarioCursoAvanceDao = new UsuarioCursoAvanceDao();
             _usuariosCursoAvance = new UsuariosCursoAvance();
         }
-        public UsuariosCursoAvance GrabarAvance(UsuariosCursoAvance usuariosCursoAvance)
+        public UsuariosCursoAvance GrabarAvance(UsuariosCursoAvance usuariosCursoAvance, int todos)
         {
-            _usuarioCursoAvanceDao.InsertarAvance(usuariosCursoAvance);
+            _usuarioCursoAvanceDao.InsertarAvance(usuariosCursoAvance, todos);
             return usuariosCursoAvance;
         }
 

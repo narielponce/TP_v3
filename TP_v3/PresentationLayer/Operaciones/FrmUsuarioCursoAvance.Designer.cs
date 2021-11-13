@@ -41,6 +41,7 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.grpRegistrar = new System.Windows.Forms.GroupBox();
+            this.txtAvance = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtCurso = new System.Windows.Forms.TextBox();
@@ -50,7 +51,7 @@ namespace TP_v3.PresentationLayer
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.grpCursosSel = new System.Windows.Forms.GroupBox();
-            this.txtAvance = new System.Windows.Forms.TextBox();
+            this.chkAllCourses = new System.Windows.Forms.CheckBox();
             this.grbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCursos)).BeginInit();
             this.grpRegistrar.SuspendLayout();
@@ -165,6 +166,7 @@ namespace TP_v3.PresentationLayer
             // 
             // grpRegistrar
             // 
+            this.grpRegistrar.Controls.Add(this.chkAllCourses);
             this.grpRegistrar.Controls.Add(this.txtAvance);
             this.grpRegistrar.Controls.Add(this.txtUsuario);
             this.grpRegistrar.Controls.Add(this.lblUsuario);
@@ -186,6 +188,13 @@ namespace TP_v3.PresentationLayer
             this.grpRegistrar.TabIndex = 15;
             this.grpRegistrar.TabStop = false;
             this.grpRegistrar.Text = "Actualización de avance";
+            // 
+            // txtAvance
+            // 
+            this.txtAvance.Location = new System.Drawing.Point(114, 180);
+            this.txtAvance.Name = "txtAvance";
+            this.txtAvance.Size = new System.Drawing.Size(100, 21);
+            this.txtAvance.TabIndex = 22;
             // 
             // txtUsuario
             // 
@@ -265,12 +274,17 @@ namespace TP_v3.PresentationLayer
             this.grpCursosSel.TabStop = false;
             this.grpCursosSel.Text = "Cursos seleccionados";
             // 
-            // txtAvance
+            // chkAllCourses
             // 
-            this.txtAvance.Location = new System.Drawing.Point(114, 180);
-            this.txtAvance.Name = "txtAvance";
-            this.txtAvance.Size = new System.Drawing.Size(100, 21);
-            this.txtAvance.TabIndex = 22;
+            this.chkAllCourses.AutoSize = true;
+            this.chkAllCourses.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAllCourses.Location = new System.Drawing.Point(397, 57);
+            this.chkAllCourses.Name = "chkAllCourses";
+            this.chkAllCourses.Size = new System.Drawing.Size(182, 21);
+            this.chkAllCourses.TabIndex = 23;
+            this.chkAllCourses.Text = "Aplicar a todo el curso?";
+            this.chkAllCourses.UseVisualStyleBackColor = true;
+            this.chkAllCourses.CheckedChanged += new System.EventHandler(this.chkAllCourses_CheckedChanged);
             // 
             // FrmUsuarioCursoAvance
             // 
@@ -320,5 +334,6 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.GroupBox grpCursosSel;
         private System.Windows.Forms.TextBox txtAvance;
+        private System.Windows.Forms.CheckBox chkAllCourses;
     }
 }
