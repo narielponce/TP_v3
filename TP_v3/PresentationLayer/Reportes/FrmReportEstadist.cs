@@ -19,15 +19,15 @@ namespace TP_v3.PresentationLayer.Reportes
 
         private void FrmReportEstadist_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'DataSet2.StPr_CANT_POR_CURSO' Puede moverla o quitarla según sea necesario.
-            this.StPr_CANT_POR_CURSOTableAdapter.Fill(this.DataSet2.StPr_CANT_POR_CURSO);
-
-            this.reportViewer1.RefreshReport();
+           
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSet2.StPr_CANT_POR_CURSO' Puede moverla o quitarla según sea necesario.
+            this.StPr_CANT_POR_CURSOTableAdapter.Fill(this.DataSet2.StPr_CANT_POR_CURSO, dtpDesde.Value);
 
+            this.reportViewer1.RefreshReport();
         }
     }
 }

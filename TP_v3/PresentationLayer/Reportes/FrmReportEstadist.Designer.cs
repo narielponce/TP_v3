@@ -83,7 +83,7 @@ namespace TP_v3.PresentationLayer.Reportes
             // dtpDesde
             // 
             this.dtpDesde.CalendarFont = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Location = new System.Drawing.Point(102, 16);
+            this.dtpDesde.Location = new System.Drawing.Point(138, 15);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 2;
@@ -102,7 +102,8 @@ namespace TP_v3.PresentationLayer.Reportes
             // dateTimePicker2
             // 
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(102, 42);
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(138, 41);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 5;
@@ -113,9 +114,9 @@ namespace TP_v3.PresentationLayer.Reportes
             this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHasta.Location = new System.Drawing.Point(15, 42);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(78, 16);
+            this.lblHasta.Size = new System.Drawing.Size(117, 16);
             this.lblHasta.TabIndex = 4;
-            this.lblHasta.Text = "Hasta fecha:";
+            this.lblHasta.Text = "Hasta fecha actual:";
             // 
             // dtpHasta
             // 
