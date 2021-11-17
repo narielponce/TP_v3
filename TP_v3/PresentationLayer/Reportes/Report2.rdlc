@@ -218,7 +218,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet2</DataSetName>
-            <Top>1.81363cm</Top>
+            <Top>2.20231cm</Top>
             <Left>0.63182cm</Left>
             <Height>1.2cm</Height>
             <Width>5cm</Width>
@@ -624,7 +624,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet2</DataSetName>
-            <Top>1.67314cm</Top>
+            <Top>2.20231cm</Top>
             <Left>6.61141cm</Left>
             <Height>5.9525cm</Height>
             <Width>9.29917cm</Width>
@@ -639,7 +639,7 @@
             </Style>
           </Chart>
           <Line Name="Line1">
-            <Top>7.80203cm</Top>
+            <Top>8.3312cm</Top>
             <Left>0.63182cm</Left>
             <Height>0cm</Height>
             <Width>15.78209cm</Width>

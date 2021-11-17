@@ -11,14 +11,17 @@ namespace TP_v3.BussinesLayer
     public class UsuarioCursoAvanceService
     {
         UsuarioCursoAvanceDao _usuarioCursoAvanceDao;
+        UsuariosCursoAvance _usuariosCursoAvance;
         public UsuarioCursoAvanceService()
         {
             _usuarioCursoAvanceDao = new UsuarioCursoAvanceDao();
+            _usuariosCursoAvance = new UsuariosCursoAvance();
         }
-        //public List<UsuariosCurso> ObtenerUsuariosCursos()
-        //{
-        //    return (List<UsuariosCurso>)_cursoDao.ObtenerCursos();
-        //}
+        public UsuariosCursoAvance GrabarAvance(UsuariosCursoAvance usuariosCursoAvance, int todos)
+        {
+            _usuarioCursoAvanceDao.InsertarAvance(usuariosCursoAvance, todos);
+            return usuariosCursoAvance;
+        }
 
     }
 }

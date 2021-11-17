@@ -24,6 +24,16 @@ namespace TP_v3.PresentationLayer
         #region EVENTOS
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (txtNombObjCorto.Text == "")  
+            {
+                MessageBox.Show("Se debe ingresar Nombre Corto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (txtNombObjLargo.Text == "")
+            {
+                MessageBox.Show("Se debe ingresar Nombre Largo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             GrabarObjetivo();
             MessageBox.Show("Actualización correcta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -33,15 +43,16 @@ namespace TP_v3.PresentationLayer
 
         #region METODOS PRIVADOS
         private void GrabarObjetivo()
-        {
-            //Creamos un nuevo objeto "categoria" con los datos que estan cargado en el Form
-            Objetivo objetivo = new Objetivo();
-            objetivo.nombreCorto = txtNombObjCorto.Text;
-            objetivo.nombreLargo = txtNombObjLargo.Text;
+        { 
+             //Creamos un nuevo objeto "Objetivo" con los datos que estan cargado en el Form
+             Objetivo objetivo = new Objetivo();
+             objetivo.nombreCorto = txtNombObjCorto.Text;
+             objetivo.nombreLargo = txtNombObjLargo.Text;
 
-            objetivo.idObjetivo = _objetivo != null ? _objetivo.idObjetivo : 0;
-            //Ahora llamamos a la capa de negocio
-            _objetivoService.GrabarObjetivo(objetivo);
+             objetivo.idObjetivo = _objetivo != null ? _objetivo.idObjetivo : 0;
+             //Ahora llamamos a la capa de negocio
+             _objetivoService.GrabarObjetivo(objetivo);
+            
         }
         private void LimpiarForm()
         {

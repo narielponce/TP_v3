@@ -798,7 +798,7 @@
         <Top>2.10785cm</Top>
         <Left>1.70308cm</Left>
         <Height>0cm</Height>
-        <Width>17.96396cm</Width>
+        <Width>16.58813cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -814,7 +814,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>9.51327in</Width>
+  <Width>7.69035in</Width>
   <Page>
     <PageHeader>
       <Height>2.44932cm</Height>
@@ -841,7 +841,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>0.73808cm</Top>
-          <Left>4.1637cm</Left>
+          <Left>5.90995cm</Left>
           <Height>0.6cm</Height>
           <Width>9.6425cm</Width>
           <Style>
@@ -856,9 +856,9 @@
         </Textbox>
         <Line Name="Line1">
           <Top>2.04321cm</Top>
-          <Left>0.36724cm</Left>
+          <Left>1.70308cm</Left>
           <Height>0cm</Height>
-          <Width>19.2998cm</Width>
+          <Width>16.58813cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -870,8 +870,8 @@
           <Source>Embedded</Source>
           <Value>logo_report</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.4021cm</Top>
-          <Left>0.36724cm</Left>
+          <Top>0.36682cm</Top>
+          <Left>1.6637cm</Left>
           <Height>1.5cm</Height>
           <Width>1.5cm</Width>
           <ZIndex>2</ZIndex>

@@ -79,18 +79,18 @@ namespace TP_v3.DataAccessLayer
             UsuariosCurso oUsuariosCurso = new UsuariosCurso();
 
             oUsuariosCurso.IdUsuario = new Usuario();
-            //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["id_usuario"].ToString());
-            //oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["usuario"].ToString());
+            oUsuariosCurso.IdUsuario.idUsuario = Convert.ToInt32(row["id_usuario"].ToString());
             oUsuariosCurso.IdUsuario.nombreUsuario = row["usuario"].ToString();
 
             oUsuariosCurso.IdCurso = new Curso();
-            //oUsuariosCurso.IdCurso.idCurso = Convert.ToInt32(row["id_curso"].ToString());
+            oUsuariosCurso.IdCurso.idCurso = Convert.ToInt32(row["id_curso"].ToString());
             oUsuariosCurso.IdCurso.nombre = row["curso"].ToString();
 
             oUsuariosCurso.Puntuacion = Convert.ToInt32(row["puntuacion"].ToString());
             oUsuariosCurso.Observacion = row["observaciones"].ToString();
             oUsuariosCurso.Inicio = Convert.ToDateTime(row["fecha_inicio"]);
             oUsuariosCurso.Fin = Convert.ToDateTime(row["fecha_fin"]);
+            oUsuariosCurso.Avance = Convert.ToInt32(row["avance"]);
             
             return oUsuariosCurso;
         }

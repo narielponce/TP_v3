@@ -786,14 +786,21 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet2TableAdapters {
             this._commandCollection[0].CommandText = "dbo.StPr_CANT_POR_CURSO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet2.StPr_CANT_POR_CURSODataTable dataTable) {
+        public virtual int Fill(DataSet2.StPr_CANT_POR_CURSODataTable dataTable, global::System.Nullable<global::System.DateTime> fechaInicio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -805,8 +812,14 @@ namespace TP_v3.PresentationLayer.Reportes.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet2.StPr_CANT_POR_CURSODataTable GetData() {
+        public virtual DataSet2.StPr_CANT_POR_CURSODataTable GetData(global::System.Nullable<global::System.DateTime> fechaInicio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             DataSet2.StPr_CANT_POR_CURSODataTable dataTable = new DataSet2.StPr_CANT_POR_CURSODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

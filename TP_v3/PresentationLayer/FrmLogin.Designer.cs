@@ -49,7 +49,6 @@ namespace TP_v3.PresentationLayer
             this.lblUser.Size = new System.Drawing.Size(54, 17);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Usuario";
-            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // txtUser
             // 
@@ -77,7 +76,6 @@ namespace TP_v3.PresentationLayer
             this.lblPass.Size = new System.Drawing.Size(84, 17);
             this.lblPass.TabIndex = 2;
             this.lblPass.Text = "Contraseña";
-            this.lblPass.Click += new System.EventHandler(this.lblPass_Click);
             // 
             // btnIngresar
             // 
