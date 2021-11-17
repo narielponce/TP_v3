@@ -30,6 +30,11 @@ namespace TP_v3.PresentationLayer
         #region EVENTOS
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (txtNombreCurso.Text == "")
+            {
+                MessageBox.Show("Se debe ingresar Nombre Curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             GrabarCurso();
             MessageBox.Show("Actualización correcta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -92,7 +97,7 @@ namespace TP_v3.PresentationLayer
             cboCateg.DataSource = source;
             cboCateg.DisplayMember = display;
             cboCateg.ValueMember = value;
-            cboCateg.SelectedIndex = -1;
+            cboCateg.SelectedIndex = 0;
         }
     }
 }

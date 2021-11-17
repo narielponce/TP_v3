@@ -19,7 +19,7 @@ namespace TP_v3.PresentationLayer.Reportes
 
         private void FrmReportEstadist_Load(object sender, EventArgs e)
         {
-           
+            lblFechaActual.Text = "Hasta fecha actual (" + DateTime.Now.ToString("dd/MM/yyyy") + ")";
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -28,6 +28,11 @@ namespace TP_v3.PresentationLayer.Reportes
             this.StPr_CANT_POR_CURSOTableAdapter.Fill(this.DataSet2.StPr_CANT_POR_CURSO, dtpDesde.Value);
 
             this.reportViewer1.RefreshReport();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

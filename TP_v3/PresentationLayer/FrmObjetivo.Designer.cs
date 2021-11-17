@@ -31,27 +31,27 @@ namespace TP_v3.PresentationLayer
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grbBusqueda = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCursoSearch = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.objetivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.objetivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idObjetivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCortoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreLargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.grbBusqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -68,13 +68,9 @@ namespace TP_v3.PresentationLayer
             this.dataGridView1.Location = new System.Drawing.Point(17, 116);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(642, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(586, 162);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // categoriaBindingSource
-            // 
-            this.categoriaBindingSource.DataSource = typeof(TP_v3.Entities.Categoria);
             // 
             // grbBusqueda
             // 
@@ -85,14 +81,14 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.grbBusqueda.Name = "grbBusqueda";
             this.grbBusqueda.Padding = new System.Windows.Forms.Padding(4);
-            this.grbBusqueda.Size = new System.Drawing.Size(476, 92);
+            this.grbBusqueda.Size = new System.Drawing.Size(429, 92);
             this.grbBusqueda.TabIndex = 1;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Buscar";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(359, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(309, 31);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 30);
@@ -106,7 +102,7 @@ namespace TP_v3.PresentationLayer
             this.txtCursoSearch.Location = new System.Drawing.Point(140, 35);
             this.txtCursoSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtCursoSearch.Name = "txtCursoSearch";
-            this.txtCursoSearch.Size = new System.Drawing.Size(211, 23);
+            this.txtCursoSearch.Size = new System.Drawing.Size(161, 23);
             this.txtCursoSearch.TabIndex = 1;
             // 
             // lblBuscar
@@ -121,7 +117,7 @@ namespace TP_v3.PresentationLayer
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(510, 46);
+            this.btnAgregar.Location = new System.Drawing.Point(454, 46);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(149, 35);
@@ -130,6 +126,14 @@ namespace TP_v3.PresentationLayer
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // objetivoBindingSource
+            // 
+            this.objetivoBindingSource.DataSource = typeof(TP_v3.Entities.Objetivo);
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataSource = typeof(TP_v3.Entities.Categoria);
+            // 
             // cursoBindingSource1
             // 
             this.cursoBindingSource1.DataSource = typeof(TP_v3.Entities.Curso);
@@ -137,10 +141,6 @@ namespace TP_v3.PresentationLayer
             // cursoBindingSource
             // 
             this.cursoBindingSource.DataSource = typeof(TP_v3.Entities.Curso);
-            // 
-            // objetivoBindingSource
-            // 
-            this.objetivoBindingSource.DataSource = typeof(TP_v3.Entities.Objetivo);
             // 
             // idObjetivoDataGridViewTextBoxColumn
             // 
@@ -161,7 +161,7 @@ namespace TP_v3.PresentationLayer
             this.nombreLargoDataGridViewTextBoxColumn.DataPropertyName = "nombreLargo";
             this.nombreLargoDataGridViewTextBoxColumn.HeaderText = "Nombre largo";
             this.nombreLargoDataGridViewTextBoxColumn.Name = "nombreLargoDataGridViewTextBoxColumn";
-            this.nombreLargoDataGridViewTextBoxColumn.Width = 150;
+            this.nombreLargoDataGridViewTextBoxColumn.Width = 180;
             // 
             // Editar
             // 
@@ -185,22 +185,24 @@ namespace TP_v3.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 433);
+            this.ClientSize = new System.Drawing.Size(619, 294);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grbBusqueda);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmObjetivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de objetivos";
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.grbBusqueda.ResumeLayout(false);
             this.grbBusqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,11 +220,11 @@ namespace TP_v3.PresentationLayer
         private System.Windows.Forms.BindingSource cursoBindingSource1;
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource objetivoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idObjetivoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCortoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreLargoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewLinkColumn Editar;
         private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
-        private System.Windows.Forms.BindingSource objetivoBindingSource;
     }
 }

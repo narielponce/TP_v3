@@ -41,6 +41,7 @@ namespace TP_v3.PresentationLayer
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.grpRegistrar = new System.Windows.Forms.GroupBox();
+            this.chkAllCourses = new System.Windows.Forms.CheckBox();
             this.txtAvance = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace TP_v3.PresentationLayer
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.grpCursosSel = new System.Windows.Forms.GroupBox();
-            this.chkAllCourses = new System.Windows.Forms.CheckBox();
             this.grbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCursos)).BeginInit();
             this.grpRegistrar.SuspendLayout();
@@ -189,6 +189,17 @@ namespace TP_v3.PresentationLayer
             this.grpRegistrar.TabStop = false;
             this.grpRegistrar.Text = "Actualización de avance";
             // 
+            // chkAllCourses
+            // 
+            this.chkAllCourses.AutoSize = true;
+            this.chkAllCourses.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAllCourses.Location = new System.Drawing.Point(397, 57);
+            this.chkAllCourses.Name = "chkAllCourses";
+            this.chkAllCourses.Size = new System.Drawing.Size(182, 21);
+            this.chkAllCourses.TabIndex = 23;
+            this.chkAllCourses.Text = "Aplicar a todo el curso?";
+            this.chkAllCourses.UseVisualStyleBackColor = true;
+            // 
             // txtAvance
             // 
             this.txtAvance.Location = new System.Drawing.Point(114, 180);
@@ -273,18 +284,6 @@ namespace TP_v3.PresentationLayer
             this.grpCursosSel.TabIndex = 16;
             this.grpCursosSel.TabStop = false;
             this.grpCursosSel.Text = "Cursos seleccionados";
-            // 
-            // chkAllCourses
-            // 
-            this.chkAllCourses.AutoSize = true;
-            this.chkAllCourses.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAllCourses.Location = new System.Drawing.Point(397, 57);
-            this.chkAllCourses.Name = "chkAllCourses";
-            this.chkAllCourses.Size = new System.Drawing.Size(182, 21);
-            this.chkAllCourses.TabIndex = 23;
-            this.chkAllCourses.Text = "Aplicar a todo el curso?";
-            this.chkAllCourses.UseVisualStyleBackColor = true;
-            this.chkAllCourses.CheckedChanged += new System.EventHandler(this.chkAllCourses_CheckedChanged);
             // 
             // FrmUsuarioCursoAvance
             // 

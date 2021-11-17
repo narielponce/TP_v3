@@ -24,6 +24,16 @@ namespace TP_v3.PresentationLayer
         #region EVENTOS
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (txtNombreCateg.Text == "")
+            {
+                MessageBox.Show("Se debe ingresar Nombre Categoría", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (txtDescCateg.Text == "")
+            {
+                MessageBox.Show("Se debe ingresar Descripción", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             GrabarCategoria();
             MessageBox.Show("Actualización correcta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();

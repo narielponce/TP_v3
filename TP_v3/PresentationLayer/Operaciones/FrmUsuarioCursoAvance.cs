@@ -36,6 +36,7 @@ namespace TP_v3.PresentationLayer
             dateTimePicker1.Enabled = false;
             dtpInicio.Enabled = false;
             chkAllCourses.Checked = false;
+            btnRegistrar.Enabled = false;
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
@@ -133,40 +134,37 @@ namespace TP_v3.PresentationLayer
             dateTimePicker1.Value = cursoSel.Inicio;
             dtpInicio.Value = cursoSel.Fin;
             txtAvance.Text = cursoSel.Avance.ToString();
+
+            btnRegistrar.Enabled = true;
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (int.Parse(txtAvance.Text) > 100)
+            {
+                MessageBox.Show("Valor de porcentaje de avance incorrecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            var cursoSel2 = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
+            //Creamos un nuevo objeto "usuarioCursoAvance" con los datos que estan cargado en el Form
+            _usuariosCursoAvance.idUsuario = new Usuario();
+            _usuariosCursoAvance.idUsuario.idUsuario = cursoSel2.IdUsuario.idUsuario;
+            _usuariosCursoAvance.idCurso = new Curso();
+            _usuariosCursoAvance.idCurso.idCurso = cursoSel2.IdCurso.idCurso;
+            _usuariosCursoAvance.inicio = cursoSel2.Inicio;
+            _usuariosCursoAvance.fin = cursoSel2.Fin;
+            _usuariosCursoAvance.porcAvance = int.Parse(txtAvance.Text);
+
+            //Ahora llamamos a la capa de negocio
 
             if (chkAllCourses.Checked == true)
             {
-                var cursoSel2 = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
-                //Creamos un nuevo objeto "usuarioCursoAvance" con los datos que estan cargado en el Form
-                _usuariosCursoAvance.idUsuario = new Usuario();
-                _usuariosCursoAvance.idUsuario.idUsuario = cursoSel2.IdUsuario.idUsuario;
-                _usuariosCursoAvance.idCurso = new Curso();
-                _usuariosCursoAvance.idCurso.idCurso = cursoSel2.IdCurso.idCurso;
-                _usuariosCursoAvance.inicio = cursoSel2.Inicio;
-                _usuariosCursoAvance.fin = cursoSel2.Fin;
-                _usuariosCursoAvance.porcAvance = int.Parse(txtAvance.Text);
-
-                //Ahora llamamos a la capa de negocio
                 _usuarioCursoAvanceService.GrabarAvance(_usuariosCursoAvance, 1);
             }
             else
             {
-                var cursoSel2 = (UsuariosCurso)dgvUsuarioCursos.CurrentRow.DataBoundItem;
-                //Creamos un nuevo objeto "usuarioCursoAvance" con los datos que estan cargado en el Form
-                _usuariosCursoAvance.idUsuario = new Usuario();
-                _usuariosCursoAvance.idUsuario.idUsuario = cursoSel2.IdUsuario.idUsuario;
-                _usuariosCursoAvance.idCurso = new Curso();
-                _usuariosCursoAvance.idCurso.idCurso = cursoSel2.IdCurso.idCurso;
-                _usuariosCursoAvance.inicio = cursoSel2.Inicio;
-                _usuariosCursoAvance.fin = cursoSel2.Fin;
-                _usuariosCursoAvance.porcAvance = int.Parse(txtAvance.Text);
-
-                //Ahora llamamos a la capa de negocio
                 _usuarioCursoAvanceService.GrabarAvance(_usuariosCursoAvance, 0);
             }
+            
             MessageBox.Show("Actualización correcta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void chkAllCourses_CheckedChanged(object sender, EventArgs e)

@@ -30,31 +30,41 @@ namespace TP_v3.PresentationLayer.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.SP_SEL_UsuariosCursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new TP_v3.PresentationLayer.Reportes.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.grpFiltros = new System.Windows.Forms.GroupBox();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.Label();
-            this.SP_SEL_UsuariosCursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSet1 = new TP_v3.PresentationLayer.Reportes.DataSet1();
             this.SP_SEL_UsuariosCursoTableAdapter = new TP_v3.PresentationLayer.Reportes.DataSet1TableAdapters.SP_SEL_UsuariosCursoTableAdapter();
-            this.grpFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_SEL_UsuariosCursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            this.grpFiltros.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SP_SEL_UsuariosCursoBindingSource
+            // 
+            this.SP_SEL_UsuariosCursoBindingSource.DataMember = "SP_SEL_UsuariosCurso";
+            this.SP_SEL_UsuariosCursoBindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.SP_SEL_UsuariosCursoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.SP_SEL_UsuariosCursoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP_v3.PresentationLayer.Reportes.Reporte.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(13, 78);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(810, 402);
+            this.reportViewer1.Size = new System.Drawing.Size(787, 477);
             this.reportViewer1.TabIndex = 0;
             // 
             // grpFiltros
@@ -74,7 +84,7 @@ namespace TP_v3.PresentationLayer.Reportes
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(621, 23);
+            this.chkTodos.Location = new System.Drawing.Point(604, 28);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(58, 20);
             this.chkTodos.TabIndex = 4;
@@ -91,7 +101,7 @@ namespace TP_v3.PresentationLayer.Reportes
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(729, 21);
+            this.btnGenerar.Location = new System.Drawing.Point(712, 26);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 2;
@@ -109,16 +119,6 @@ namespace TP_v3.PresentationLayer.Reportes
             this.lblCurso.TabIndex = 0;
             this.lblCurso.Text = "Curso";
             // 
-            // SP_SEL_UsuariosCursoBindingSource
-            // 
-            this.SP_SEL_UsuariosCursoBindingSource.DataMember = "SP_SEL_UsuariosCurso";
-            this.SP_SEL_UsuariosCursoBindingSource.DataSource = this.DataSet1;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // SP_SEL_UsuariosCursoTableAdapter
             // 
             this.SP_SEL_UsuariosCursoTableAdapter.ClearBeforeFill = true;
@@ -127,17 +127,18 @@ namespace TP_v3.PresentationLayer.Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 492);
+            this.ClientSize = new System.Drawing.Size(812, 567);
             this.Controls.Add(this.grpFiltros);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmReporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de usuarios por curso";
             this.Load += new System.EventHandler(this.FrmReporte_Load);
-            this.grpFiltros.ResumeLayout(false);
-            this.grpFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_SEL_UsuariosCursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            this.grpFiltros.ResumeLayout(false);
+            this.grpFiltros.PerformLayout();
             this.ResumeLayout(false);
 
         }

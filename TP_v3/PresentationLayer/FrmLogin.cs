@@ -26,16 +26,6 @@ namespace TP_v3.PresentationLayer
             _usuario = new Usuario();
         }
 
-        private void lblUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPass_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -44,7 +34,7 @@ namespace TP_v3.PresentationLayer
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             //Validamos que se haya ingresado un usuario.
-            if ((txtUser.Text == ""))
+            if (txtUser.Text == "")
             {
                 MessageBox.Show("Se debe ingresar un usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -84,9 +74,6 @@ namespace TP_v3.PresentationLayer
             //Inicializamos la variable usuarioValido en false, para que solo si el usuario es valido retorne true
             bool usuarioValido = false;
 
-            //La doble barra o */ nos permite escribir comentarios sobre nuestro codigo sin afectar su funcionamiento.
-
-            //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
             try
             {
 
@@ -116,7 +103,7 @@ namespace TP_v3.PresentationLayer
             }
 
             // Retornamos el valor de usuarioValido. 
-            return usuarioValido;
+             return usuarioValido;
         }
     }
 }

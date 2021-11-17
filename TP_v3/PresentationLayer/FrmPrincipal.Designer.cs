@@ -48,15 +48,16 @@ namespace TP_v3
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pboxUser = new System.Windows.Forms.PictureBox();
-            this.fechasDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
@@ -67,7 +68,7 @@ namespace TP_v3
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1028, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,30 +100,29 @@ namespace TP_v3
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cursosToolStripMenuItem,
             this.categoríasToolStripMenuItem,
-            this.objetivosToolStripMenuItem,
-            this.fechasDeCursosToolStripMenuItem});
+            this.objetivosToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.consultaToolStripMenuItem.Text = "ABM\'s";
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
             // objetivosToolStripMenuItem
             // 
             this.objetivosToolStripMenuItem.Name = "objetivosToolStripMenuItem";
-            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.objetivosToolStripMenuItem.Text = "Objetivos";
             this.objetivosToolStripMenuItem.Click += new System.EventHandler(this.objetivosToolStripMenuItem_Click);
             // 
@@ -190,30 +190,35 @@ namespace TP_v3
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.lblUser.Location = new System.Drawing.Point(770, 9);
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(101, 9);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 17);
+            this.lblUser.Size = new System.Drawing.Size(0, 18);
             this.lblUser.TabIndex = 1;
             // 
             // pboxUser
             // 
-            this.pboxUser.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.pboxUser.BackColor = System.Drawing.Color.Transparent;
             this.pboxUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pboxUser.Image = ((System.Drawing.Image)(resources.GetObject("pboxUser.Image")));
-            this.pboxUser.Location = new System.Drawing.Point(949, 0);
+            this.pboxUser.Location = new System.Drawing.Point(3, 3);
             this.pboxUser.Name = "pboxUser";
-            this.pboxUser.Size = new System.Drawing.Size(62, 27);
+            this.pboxUser.Size = new System.Drawing.Size(67, 36);
             this.pboxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxUser.TabIndex = 2;
             this.pboxUser.TabStop = false;
             // 
-            // fechasDeCursosToolStripMenuItem
+            // panel1
             // 
-            this.fechasDeCursosToolStripMenuItem.Name = "fechasDeCursosToolStripMenuItem";
-            this.fechasDeCursosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.fechasDeCursosToolStripMenuItem.Text = "Fechas de cursos";
-            this.fechasDeCursosToolStripMenuItem.Click += new System.EventHandler(this.fechasDeCursosToolStripMenuItem_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pboxUser);
+            this.panel1.Controls.Add(this.lblUser);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 537);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1028, 51);
+            this.panel1.TabIndex = 3;
             // 
             // FrmPrincipal
             // 
@@ -222,21 +227,22 @@ namespace TP_v3
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 588);
-            this.Controls.Add(this.pboxUser);
-            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.Text = "Menú principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxUser)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -254,13 +260,13 @@ namespace TP_v3
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pboxUser;
         private System.Windows.Forms.ToolStripMenuItem objetivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscripciónACursadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeAvanceCursadoPorUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeEstadosPorCursoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadisticasVariasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fechasDeCursosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pboxUser;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

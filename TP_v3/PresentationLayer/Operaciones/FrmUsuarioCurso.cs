@@ -67,6 +67,21 @@ namespace TP_v3.PresentationLayer
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(cboUsuario.Text))
+            {
+                MessageBox.Show("Se debe seleccionar un usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (string.IsNullOrEmpty(cboCurso.Text))
+            {
+                MessageBox.Show("Se debe seleccionar un curso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (dtpInicio.Value.Date >= dtpFin.Value.Date)
+            {
+                MessageBox.Show("Conflicto de fechas de inicio y final", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             GrabarUsuarioCurso();
             MessageBox.Show("Curso registrado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

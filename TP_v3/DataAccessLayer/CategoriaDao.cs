@@ -57,8 +57,8 @@ namespace TP_v3.DataAccessLayer
                                           "nombre, ",
                                           "descripcion, ",
                                           "borrado ",
-                                          "FROM Categorias ",
-                                          "WHERE borrado = 0 ");
+                                          "FROM Categorias ");
+                                          //"WHERE borrado = 0 ");
             
             if (!string.IsNullOrEmpty(search))
             {

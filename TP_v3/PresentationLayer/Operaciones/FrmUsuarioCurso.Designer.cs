@@ -80,7 +80,7 @@ namespace TP_v3.PresentationLayer
             this.grbBusqueda.Controls.Add(this.lblUsuario);
             this.grbBusqueda.Location = new System.Drawing.Point(12, 12);
             this.grbBusqueda.Name = "grbBusqueda";
-            this.grbBusqueda.Size = new System.Drawing.Size(347, 276);
+            this.grbBusqueda.Size = new System.Drawing.Size(646, 232);
             this.grbBusqueda.TabIndex = 2;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Datos";
@@ -95,14 +95,14 @@ namespace TP_v3.PresentationLayer
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(133, 237);
+            this.dtpFin.Location = new System.Drawing.Point(133, 186);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(200, 23);
             this.dtpFin.TabIndex = 11;
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(133, 204);
+            this.dtpInicio.Location = new System.Drawing.Point(133, 153);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(200, 23);
             this.dtpInicio.TabIndex = 10;
@@ -110,7 +110,7 @@ namespace TP_v3.PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 237);
+            this.label1.Location = new System.Drawing.Point(14, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 9;
@@ -119,7 +119,7 @@ namespace TP_v3.PresentationLayer
             // lblFechInicio
             // 
             this.lblFechInicio.AutoSize = true;
-            this.lblFechInicio.Location = new System.Drawing.Point(14, 204);
+            this.lblFechInicio.Location = new System.Drawing.Point(14, 153);
             this.lblFechInicio.Name = "lblFechInicio";
             this.lblFechInicio.Size = new System.Drawing.Size(85, 17);
             this.lblFechInicio.TabIndex = 8;
@@ -127,16 +127,16 @@ namespace TP_v3.PresentationLayer
             // 
             // txtObserv
             // 
-            this.txtObserv.Location = new System.Drawing.Point(133, 116);
+            this.txtObserv.Location = new System.Drawing.Point(466, 25);
             this.txtObserv.Multiline = true;
             this.txtObserv.Name = "txtObserv";
-            this.txtObserv.Size = new System.Drawing.Size(200, 72);
+            this.txtObserv.Size = new System.Drawing.Size(162, 85);
             this.txtObserv.TabIndex = 7;
             // 
             // lblObser
             // 
             this.lblObser.AutoSize = true;
-            this.lblObser.Location = new System.Drawing.Point(14, 116);
+            this.lblObser.Location = new System.Drawing.Point(347, 25);
             this.lblObser.Name = "lblObser";
             this.lblObser.Size = new System.Drawing.Size(103, 17);
             this.lblObser.TabIndex = 6;
@@ -170,7 +170,7 @@ namespace TP_v3.PresentationLayer
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(145, 312);
+            this.btnCancelar.Location = new System.Drawing.Point(478, 259);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(79, 40);
             this.btnCancelar.TabIndex = 3;
@@ -180,7 +180,7 @@ namespace TP_v3.PresentationLayer
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(260, 312);
+            this.btnRegistrar.Location = new System.Drawing.Point(573, 259);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 40);
             this.btnRegistrar.TabIndex = 4;
@@ -192,13 +192,15 @@ namespace TP_v3.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 365);
+            this.ClientSize = new System.Drawing.Size(672, 312);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.grbBusqueda);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarioCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscripcion a cursado";
             this.Load += new System.EventHandler(this.FrmUsuarioCurso_Load);
             this.grbBusqueda.ResumeLayout(false);
